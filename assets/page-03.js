@@ -43,8 +43,8 @@ const COORDINATE_WORD = 'ORIGINE'; // Réponse provisoire.
       const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
       const target = new Map(COORDINATES.map(([x,y],i) => [x + ',' + y, COORDINATE_WORD[i]]));
       const fragment = document.createDocumentFragment();
-      for (let y=4; y>=-4; y--) {
-        for (let x=-4; x<=4; x++) {
+      for (let y=8; y>=-8; y--) {
+        for (let x=-8; x<=8; x++) {
           const cell = document.createElement('span');
           cell.className = 'coordinate-cell' + (x === 0 && y === 0 ? ' origin' : '');
           const seed = (x+7)*17 + (y+11)*23 + (x*y+50)*7;
