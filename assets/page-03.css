@@ -11,3 +11,10 @@
 .coordinate-sequence{display:flex;max-width:940px;justify-content:center;flex-wrap:wrap;gap:clamp(12px,3vw,26px);color:#d2c1a1;font:clamp(14px,2.5vw,21px) 'Courier New',monospace;letter-spacing:.04em;text-align:center}
 .coordinate-sequence span{border-bottom:1px solid #bc9b6b3b;padding-bottom:6px}
 @media(max-width:520px){.coordinate-puzzle{min-height:92vh}.coordinates-grid-wrap{width:min(96vw,520px)}.coordinate-cell{font-size:clamp(12px,3.7vw,20px)}}
+
+/* Bascule : la transmission du jour 3 laisse toute la place au repère. */
+.archive-three .prophecy,.archive-three .arcana-space{transition:opacity .85s ease,transform .85s ease,visibility .85s ease}
+.archive-three.coordinate-mode .prophecy,.archive-three.coordinate-mode .arcana-space{opacity:0;visibility:hidden;transform:translateY(-15px);position:absolute;pointer-events:none}
+.archive-three.coordinate-mode .page-shell{padding-top:20px;padding-bottom:35px}
+.archive-three.coordinate-mode .coordinate-puzzle{margin:0;min-height:calc(100dvh - 55px);border:0;padding:20px 10px;gap:clamp(25px,5vh,55px)}
+@media(prefers-reduced-motion:reduce){.archive-three .prophecy,.archive-three .arcana-space{transition:none}}
