@@ -48,8 +48,8 @@ const COORDINATE_WORD = 'ORIGINE'; // Réponse provisoire.
           const cell = document.createElement('span');
           cell.className = 'coordinate-cell' + (x === 0 && y === 0 ? ' origin' : '');
           const seed = (x+7)*17 + (y+11)*23 + (x*y+50)*7;
-          cell.textContent = (x === 0 && y === 0) ? '✕' : (target.get(x+','+y) || alphabet[((seed%26)+26)%26]);
-          cell.title = x === 0 && y === 0 ? 'Origine' : '';
+          cell.textContent = (x === 0 && y === 0) ? '' : (target.get(x+','+y) || alphabet[((seed%26)+26)%26]);
+          cell.title = '';
           fragment.appendChild(cell);
         }
       }
