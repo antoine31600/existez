@@ -1,0 +1,9 @@
+/* JOUR VIII — un fragment discret apparaît sous la carte le 9 décembre. */
+.archive-eight .page-shell{padding-bottom:100px}
+.archive-eight .artifact-mount[hidden]{display:none}
+.archive-eight .artifact-mount{display:flex;justify-content:center;align-items:center;margin:80px auto 30px}
+.archive-eight .artifact-fragment{position:relative;width:76px;height:86px;display:grid;place-items:center;border:1px solid #604f56;background:linear-gradient(135deg,#181419,#050507 75%);color:#a38c7e;box-shadow:0 0 25px #9d79900c;transform:rotate(-3deg);text-decoration:none;transition:transform .25s,border-color .25s,box-shadow .25s}
+.archive-eight .artifact-fragment:hover,.archive-eight .artifact-fragment:focus-visible{transform:rotate(0deg) scale(1.07);border-color:#bea68d;box-shadow:0 0 25px #ab8c6645;outline-offset:5px}
+.archive-eight .artifact-fragment::before{content:'';position:absolute;inset:8px;border:1px solid #b59b7645;pointer-events:none}
+.archive-eight .artifact-glyph{font:29px/1 Georgia,serif;color:#bba681}
+.archive-eight .artifact-corner{position:absolute;right:4px;bottom:2px;font:9px monospace;opacity:.45}
