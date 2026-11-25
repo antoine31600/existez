@@ -9,6 +9,9 @@ body{font-family:Consolas,'Courier New',monospace}
 .transmission{z-index:2;display:flex;justify-content:center;align-items:center;text-align:center;width:min(950px,100%);min-height:180px;max-height:65vh;overflow-wrap:anywhere;white-space:pre-line;font-size:clamp(19px,3.3vw,35px);letter-spacing:.16em;line-height:1.75;text-shadow:-2px 0 #973149,2px 0 #386878;user-select:none}
 .transmission.scramble{animation:signal-jitter .17s steps(2,end) infinite}
 .transmission.warning{animation:none!important;text-shadow:none!important;transform:none!important;filter:none!important;letter-spacing:.19em;font-weight:bold;color:#e6dce0;user-select:text}
+.transmission.warning{position:fixed;inset:0;width:100vw;height:100vh;height:100dvh;max-height:none;min-height:0;max-width:none;display:block;overflow:hidden;margin:0;padding:0 10px;text-align:justify;text-align-last:justify;white-space:normal;overflow-wrap:normal;word-spacing:.35em;font-size:clamp(15px,2.15vw,27px);line-height:1.85;letter-spacing:.08em;z-index:2}
+body.warning-active .static-layer{animation:none;opacity:0}
+body.warning-active .scanlines{opacity:0}
 .transmission.final{font:normal clamp(21px,3.15vw,34px)/1.65 Georgia,'Times New Roman',serif;letter-spacing:.012em;color:#e2ded8;text-shadow:none;animation:none;user-select:text;max-height:none}
 .button-slot{position:relative;z-index:3;min-height:64px;min-width:255px;display:flex;align-items:center;justify-content:center}
 .witness{position:relative;min-height:62px;min-width:255px;padding:17px 24px;border:1px solid #965d6d;background:#21131a;color:#e8dfe1;font:12px Consolas,'Courier New',monospace;letter-spacing:.16em;cursor:pointer;white-space:nowrap;transition:transform .13s,opacity .28s,filter .16s,clip-path .16s,background .16s}
