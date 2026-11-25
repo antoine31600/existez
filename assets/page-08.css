@@ -7,7 +7,6 @@
 .archive-eight .artifact-fragment:focus-visible{outline:1px solid #bba681;outline-offset:5px}
 @media(hover:hover) and (pointer:fine){
   .archive-eight .artifact-fragment{cursor:none}
-  .artifact-cursor-ring{position:fixed;left:0;top:0;width:32px;height:32px;border:1px solid #c7ac78;border-radius:50%;box-shadow:0 0 8px #c7ac7855,inset 0 0 6px #c7ac7825;transform:translate(-50%,-50%);pointer-events:none;z-index:100;opacity:0;transition:opacity .16s ease}
+  .artifact-cursor-ring{position:fixed;left:0;top:0;width:5px;height:5px;border:0;background:#e8c783;border-radius:50%;box-shadow:0 0 5px #e8c78388;transform:translate(-50%,-50%);pointer-events:none;z-index:100;opacity:0;transition:opacity .16s ease}
   .artifact-cursor-ring.is-visible{opacity:1}
-  .artifact-cursor-ring::after{content:'';position:absolute;inset:14px;border-radius:50%;background:#ebd9b9}
 }
