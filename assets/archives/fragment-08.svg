@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:x="adobe:ns:meta/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 640 880">
+ <title>Fragment VIII</title>
+ <metadata>
+  <x:xmpmeta xmlns:x="adobe:ns:meta/">
+   <rdf:RDF>
+    <rdf:Description rdf:about="">
+     <dc:title><rdf:Alt><rdf:li xml:lang="x-default">Fragment VIII</rdf:li></rdf:Alt></dc:title>
+     <dc:description><rdf:Alt><rdf:li xml:lang="x-default">[MOT_SECRET_A_DEFINIR]</rdf:li></rdf:Alt></dc:description>
+    </rdf:Description>
+   </rdf:RDF>
+  </x:xmpmeta>
+ </metadata>
+ <rect width="640" height="880" fill="#0e0d12"/>
+ <rect x="38" y="38" width="564" height="804" fill="none" stroke="#a48a64" stroke-width="2"/>
+ <rect x="56" y="56" width="528" height="768" fill="none" stroke="#5b4b49"/>
+ <g fill="none" stroke="#b19a77" stroke-width="2" opacity=".75">
+  <ellipse cx="320" cy="420" rx="160" ry="68" transform="rotate(22 320 420)"/>
+  <ellipse cx="320" cy="420" rx="160" ry="68" transform="rotate(80 320 420)"/>
+  <ellipse cx="320" cy="420" rx="160" ry="68" transform="rotate(140 320 420)"/>
+ </g>
+ <circle cx="320" cy="420" r="10" fill="#c6ab7f"/>
+ <text x="320" y="145" text-anchor="middle" fill="#c6ab7f" font-family="Georgia,serif" font-size="32">VIII</text>
+ <text x="320" y="730" text-anchor="middle" fill="#ad9780" font-family="Georgia,serif" font-size="17" letter-spacing="5">[FRAGMENT]</text>
+</svg>
