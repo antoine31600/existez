@@ -11,7 +11,7 @@
  * GitHub Pages est public : le puzzle et la solution sont visibles dans ce code
  * avant la date. L'horloge du navigateur n'est pas une sécurité.
  */
-const REVEAL_COORDINATES_AT = Date.parse('2026-11-03T23:00:00Z');
+const REVEAL_COORDINATES_AT = Date.parse('2026-12-03T23:00:00Z');
 const COORDINATES = [[2,3],[-3,-1],[4,0],[-1,4],[3,-3],[-2,2],[1,-4]];
 const COORDINATE_WORD = 'ORIGINE';
 (() => {
@@ -46,9 +46,19 @@ const COORDINATE_WORD = 'ORIGINE';
     grid.appendChild(fragment);
     for(const [x,y] of COORDINATES){const s=document.createElement('span');s.textContent='('+x+' ; '+y+')';sequence.appendChild(s);}
   }
+  const params = new URLSearchParams(window.location.search);
+  // Mode d'essai uniquement : ?apercu=4decembre
+  const preview = params.get('apercu') === '4decembre';
+  let lastVisible = null;
   function update(){
-    if(Date.now()>=REVEAL_COORDINATES_AT){build();puzzle.hidden=false;}
-    else{puzzle.hidden=true;}
+    const visible = preview || Date.now() >= REVEAL_COORDINATES_AT;
+    if (visible === lastVisible) return;
+    lastVisible = visible;
+    if (visible) build();
+    puzzle.hidden = !visible;
+    document.body.classList.toggle('coordinate-mode', visible);
+    // La carte et la prophétie deviennent invisibles au profit du repère.
+    // Elles restent éditables dans le HTML et réapparaissent avant la date.
   }
   update();
   setInterval(update,1000);
