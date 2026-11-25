@@ -10,6 +10,8 @@ body{font-family:Consolas,'Courier New',monospace}
 .transmission.scramble{animation:signal-jitter .17s steps(2,end) infinite}
 .transmission.warning{animation:none!important;text-shadow:none!important;transform:none!important;filter:none!important;letter-spacing:.19em;font-weight:bold;color:#e6dce0;user-select:text}
 .transmission.warning{position:fixed;inset:0;width:100vw;height:100vh;height:100dvh;max-height:none;min-height:0;max-width:none;display:block;overflow:hidden;margin:0;padding:0 10px;text-align:justify;text-align-last:justify;white-space:normal;overflow-wrap:normal;word-spacing:.35em;font-size:clamp(15px,2.15vw,27px);line-height:1.85;letter-spacing:.08em;z-index:2}
+.threshold:has(.transmission.warning){overflow:hidden}
+body.warning-active .button-slot{position:fixed;left:50%;top:77%;transform:translateX(-50%);z-index:6}
 body.warning-active .static-layer{animation:none;opacity:0}
 body.warning-active .scanlines{opacity:0}
 .transmission.final{font:normal clamp(21px,3.15vw,34px)/1.65 Georgia,'Times New Roman',serif;letter-spacing:.012em;color:#e2ded8;text-shadow:none;animation:none;user-select:text;max-height:none}
