@@ -36,3 +36,8 @@ body{font-family:Georgia,'Times New Roman',serif}
 @media(hover:none){.hover-invitation{opacity:1;transform:none}}
 @media(max-width:520px){.page-shell{padding-top:78px}.prophecy{min-height:180px}.arcana-space{margin-top:30px}.tarot-card{width:min(285px,82vw);height:min(455px,130vw)}}
 @media(prefers-reduced-motion:reduce){.tarot-inner{transition:none}.hover-invitation{transition:none}}
+
+/* Une carte révélée laisse une trace discrète dans la prophétie. */
+.prophecy-placeholder{transition:text-shadow .8s ease,color .8s ease}
+body.arcana-awake .prophecy-placeholder{color:#e6dbcb;text-shadow:0 0 18px #c39d6536}
+@media(prefers-reduced-motion:reduce){.prophecy-placeholder{transition:none}}
