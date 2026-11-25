@@ -1,66 +1,94 @@
-/*
- * PROJET EXISTENCE — JOUR 3
- * Prophétie et arcane sont des emplacements à compléter par le créateur.
- * Le repère apparaît le 4 décembre 2026 à 00:00 HEURE DE PARIS
- * (soit le 3 décembre 2026 à 23:00 UTC).
- *
- * RÉPONSE PROVISOIRE : ORIGINE.
- * Les joueurs lisent les coordonnées (x,y) : x augmente vers la droite,
- * y augmente vers le haut, et la croix est en (0,0).
- *
- * GitHub Pages est public : le puzzle et la solution sont visibles dans ce code
- * avant la date. L'horloge du navigateur n'est pas une sécurité.
+/* PROJET EXISTENCE — JOUR 3
+ * Le 4 décembre 2026 à 00 h 00 à Paris = 3 décembre 23 h UTC.
+ * Test : ?apercu=4decembre (ne change pas la date réelle).
+ * Texte, nom et effets de la carte sont à remplir par le créateur.
+ * Les fichiers GitHub Pages sont publics, même avant la date.
  */
 const REVEAL_COORDINATES_AT = Date.parse('2026-12-03T23:00:00Z');
 const COORDINATES = [[2,3],[-3,-1],[4,0],[-1,4],[3,-3],[-2,2],[1,-4]];
-const COORDINATE_WORD = 'ORIGINE';
+const COORDINATE_WORD = 'ORIGINE'; // Réponse provisoire.
+
 (() => {
   'use strict';
-  const button=document.getElementById('arcana-button');
-  if(button){
-    button.addEventListener('click',()=>{
-      const revealed=button.classList.toggle('is-revealed');
-      document.body.classList.toggle('arcana-awake',revealed);
-      button.setAttribute('aria-pressed',String(revealed));
-      button.setAttribute('aria-label',revealed?'Revoir le dos de la carte':'Retourner la carte de tarot');
-    });
-  }
-  const puzzle=document.getElementById('coordinate-puzzle');
-  const grid=document.getElementById('coordinate-grid');
-  const sequence=document.getElementById('coordinate-sequence');
-  const alphabet='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  const picks=new Map(COORDINATES.map(([x,y],i)=>[x+','+y,COORDINATE_WORD[i]]));
-  function randomLetter(x,y){const index=(((x+7)*17+(y+11)*23+(x*y+50)*7)%alphabet.length+alphabet.length)%alphabet.length;return alphabet[index];}
-  function build(){
-    if(grid.childElementCount)return;
-    const fragment=document.createDocumentFragment();
-    for(let y=4;y>=-4;y--){
-      for(let x=-4;x<=4;x++){
-        const cell=document.createElement('span');
-        cell.className='coordinate-cell'+(x===0&&y===0?' origin':'');
-        cell.textContent=x===0&&y===0?'✕':(picks.get(x+','+y)||randomLetter(x,y));
-        cell.setAttribute('aria-label',x===0&&y===0?'Origine (0,0)':undefined||'');
-        fragment.appendChild(cell);
+  function init() {
+    const card = document.getElementById('arcana-button');
+    const archive = document.getElementById('archive-content');
+    const puzzle = document.getElementById('coordinate-puzzle');
+    const grid = document.getElementById('coordinate-grid');
+    const sequence = document.getElementById('coordinate-sequence');
+    const nav = document.getElementById('view-actions');
+    const archiveButton = document.getElementById('view-archive');
+    const puzzleButton = document.getElementById('view-puzzle');
+    if (!archive || !puzzle || !grid || !sequence || !nav || !archiveButton || !puzzleButton) return;
+
+    if (card) {
+      card.addEventListener('click', () => {
+        const revealed = card.classList.toggle('is-revealed');
+        document.body.classList.toggle('arcana-awake', revealed);
+        card.setAttribute('aria-pressed', String(revealed));
+        card.setAttribute('aria-label', revealed ? 'Revoir le dos de la carte' : 'Retourner la carte de tarot');
+      });
+    }
+
+    const preview = new URLSearchParams(location.search).get('apercu') === '4decembre';
+    let mode = null;
+    let wasUnlocked = false;
+
+    // Ne construire la grille qu'une seule fois.
+    function buildGrid() {
+      if (grid.children.length !== 0) return;
+      const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+      const target = new Map(COORDINATES.map(([x,y],i) => [x + ',' + y, COORDINATE_WORD[i]]));
+      const fragment = document.createDocumentFragment();
+      for (let y=4; y>=-4; y--) {
+        for (let x=-4; x<=4; x++) {
+          const cell = document.createElement('span');
+          cell.className = 'coordinate-cell' + (x === 0 && y === 0 ? ' origin' : '');
+          const seed = (x+7)*17 + (y+11)*23 + (x*y+50)*7;
+          cell.textContent = (x === 0 && y === 0) ? '✕' : (target.get(x+','+y) || alphabet[((seed%26)+26)%26]);
+          cell.title = x === 0 && y === 0 ? 'Origine' : '';
+          fragment.appendChild(cell);
+        }
+      }
+      grid.appendChild(fragment);
+      for (const [x,y] of COORDINATES) {
+        const item = document.createElement('span');
+        item.textContent = '(' + x + ' ; ' + y + ')';
+        sequence.appendChild(item);
       }
     }
-    grid.appendChild(fragment);
-    for(const [x,y] of COORDINATES){const s=document.createElement('span');s.textContent='('+x+' ; '+y+')';sequence.appendChild(s);}
+
+    function show(modeRequested) {
+      mode = modeRequested;
+      const showingPuzzle = mode === 'puzzle';
+      archive.hidden = showingPuzzle;
+      puzzle.hidden = !showingPuzzle;
+      document.body.classList.toggle('coordinate-mode', showingPuzzle);
+      nav.hidden = !wasUnlocked;
+      archiveButton.hidden = !showingPuzzle || !wasUnlocked;
+      puzzleButton.hidden = showingPuzzle || !wasUnlocked;
+    }
+
+    function refresh() {
+      const unlocked = preview || Date.now() >= REVEAL_COORDINATES_AT;
+      if (unlocked && !wasUnlocked) {
+        buildGrid();
+        wasUnlocked = true;
+        show('puzzle');
+      } else if (!unlocked && wasUnlocked) {
+        wasUnlocked = false;
+        show('archive');
+      } else if (mode === null) {
+        show('archive');
+      }
+    }
+
+    archiveButton.addEventListener('click', () => { show('archive'); scrollTo({top:0,behavior:'smooth'}); });
+    puzzleButton.addEventListener('click', () => { show('puzzle'); scrollTo({top:0,behavior:'smooth'}); });
+    refresh();
+    setInterval(refresh,1000);
+    window.addEventListener('pageshow', refresh);
   }
-  const params = new URLSearchParams(window.location.search);
-  // Mode d'essai uniquement : ?apercu=4decembre
-  const preview = params.get('apercu') === '4decembre';
-  let lastVisible = null;
-  function update(){
-    const visible = preview || Date.now() >= REVEAL_COORDINATES_AT;
-    if (visible === lastVisible) return;
-    lastVisible = visible;
-    if (visible) build();
-    puzzle.hidden = !visible;
-    document.body.classList.toggle('coordinate-mode', visible);
-    // La carte et la prophétie deviennent invisibles au profit du repère.
-    // Elles restent éditables dans le HTML et réapparaissent avant la date.
-  }
-  update();
-  setInterval(update,1000);
-  window.addEventListener('pageshow',update);
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, {once:true});
+  else init();
 })();
