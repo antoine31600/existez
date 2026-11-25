@@ -11,7 +11,7 @@
  * Le mot sera consultable dans ce fichier public AVANT cette date.
  * Ce n'est donc pas un mécanisme de secret sécurisé.
  */
-const JOUR_03_MOT_DE_PASSE = '[MOT_DU_JOUR_03_A_DEFINIR]';
+const JOUR_03_MOT_DE_PASSE = 'passage'; // PROVISOIRE : adresse /existez/passage/
 const JOUR_03_DATE_PARIS = Date.parse('2026-12-02T23:00:00Z');
 
 (() => {
@@ -20,6 +20,7 @@ const JOUR_03_DATE_PARIS = Date.parse('2026-12-02T23:00:00Z');
   if (button) {
     button.addEventListener('click', () => {
       const revealed = button.classList.toggle('is-revealed');
+      document.body.classList.toggle('arcana-awake', revealed);
       button.setAttribute('aria-pressed', String(revealed));
       button.setAttribute('aria-label', revealed ? 'Revoir le dos de la carte de tarot' : 'Retourner la carte de tarot');
     });
