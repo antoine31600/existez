@@ -1,23 +1,26 @@
-/* JOUR 3 : grille + navigation entre souvenir et repère */
-.archive-three [hidden]{display:none !important}
-.archive-three .page-shell{display:flex;flex-direction:column;align-items:center;min-height:100dvh;padding:clamp(35px,7vh,80px) 16px 48px;overflow-x:hidden}
+/* Jour 3, état du 4 décembre : repère plein écran, carte au centre */
+.archive-three [hidden]{display:none!important}
+.archive-three .page-shell{position:relative;min-height:100dvh;display:flex;flex-direction:column;align-items:center;padding:clamp(35px,7vh,80px) 16px 48px;overflow-x:hidden}
 .archive-content{width:100%;min-height:70vh}
 .archive-three .prophecy{min-height:220px}
 .archive-three .arcana-space{margin:36px auto 25px}
-.coordinate-puzzle{width:100%;max-width:1100px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(28px,5vh,56px);padding:12px 0 30px}
-.coordinates-grid-wrap{width:min(82vmin,680px,94vw);aspect-ratio:1;flex-shrink:0}
-.coordinate-grid{position:relative;width:100%;height:100%;display:grid;grid-template-columns:repeat(9,minmax(0,1fr));grid-template-rows:repeat(9,minmax(0,1fr));border:1px solid #b9a27632;background:radial-gradient(circle at 50% 50%,#34263044,transparent 72%)}
-.coordinate-grid:before,.coordinate-grid:after{content:'';position:absolute;pointer-events:none;z-index:0;background:#c6aa8040}
-.coordinate-grid:before{top:0;bottom:0;left:50%;width:1px}
+.archive-three.coordinate-mode .page-shell{padding:0;min-height:100dvh;overflow:hidden}
+.coordinate-puzzle{position:relative;width:100%;min-height:100dvh;height:100dvh;height:100svh;overflow:hidden;background:radial-gradient(ellipse at center,#1e1620 0%,#030305 80%)}
+.coordinates-grid-wrap{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+.coordinate-grid{width:100%;height:100%;position:relative;display:grid;grid-template-columns:repeat(9,minmax(0,1fr));grid-template-rows:repeat(9,minmax(0,1fr))}
+.coordinate-grid:before,.coordinate-grid:after{content:'';position:absolute;z-index:0;background:#b9a27631;pointer-events:none}
+.coordinate-grid:before{left:50%;top:0;bottom:0;width:1px}
 .coordinate-grid:after{top:50%;left:0;right:0;height:1px}
-.coordinate-cell{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;color:#ded1bc;font:clamp(15px,2.55vmin,26px)/1 monospace}
-.coordinate-cell.origin{font-size:clamp(27px,4vmin,42px);color:#e3bc86;text-shadow:0 0 12px #c99e7b88}
-.coordinate-sequence{display:flex;justify-content:center;flex-wrap:wrap;gap:clamp(10px,2vw,24px);max-width:100%;font:clamp(14px,2.1vw,20px)/1.7 monospace;color:#dac4a2;text-align:center}
-.coordinate-sequence span{border-bottom:1px solid #bea27e55;padding:0 2px 5px}
-.view-actions{order:2;width:100%;max-width:1100px;display:flex;align-items:center;justify-content:center;padding:15px 0 20px}
-.view-switch{border:1px solid #ae9671;background:#171217;color:#e9d9bd;cursor:pointer;padding:13px 21px;font:12px/1.4 monospace;letter-spacing:.08em}
+.coordinate-cell{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;font:clamp(16px,2.3vw,29px)/1 monospace;color:#d4c9bc;text-shadow:0 0 8px #000;user-select:text}
+.coordinate-cell.origin{color:#e4bc83;font-size:clamp(22px,3vw,42px)}
+.puzzle-card-center{position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:center;pointer-events:none;padding:62px 12px 110px}
+.puzzle-card-center .arcana{pointer-events:auto;filter:drop-shadow(0 0 26px #020203) drop-shadow(0 0 18px #020203)}
+.puzzle-card-center .tarot-card{width:min(290px,40vw,34vh);height:auto;aspect-ratio:290 / 465;max-height:min(465px,57vh)}
+.coordinate-sequence{position:absolute;z-index:5;left:50%;bottom:clamp(18px,4vh,48px);transform:translateX(-50%);width:min(95%,1200px);display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:clamp(9px,1.6vw,22px);font:clamp(12px,1.65vw,19px)/1.5 monospace;color:#e7cfab;text-align:center;text-shadow:0 2px 8px #000,0 0 10px #000}
+.coordinate-sequence span{padding:2px 4px;border-bottom:1px solid #c9ae8177;background:#03030555}
+.view-actions{position:relative;z-index:7;width:100%;display:flex;align-items:center;justify-content:center;margin-top:20px}
+.coordinate-mode .view-actions{position:fixed;top:12px;left:0;margin:0;pointer-events:none}
+.view-switch{pointer-events:auto;cursor:pointer;border:1px solid #ae9671;background:#171217ee;color:#e9d9bd;padding:12px 19px;font:12px/1.4 monospace;letter-spacing:.06em}
 .view-switch:hover,.view-switch:focus-visible{background:#2f2229}
-.archive-three .coordinate-puzzle{order:1}
-.archive-three .archive-content{order:1}
-@media(max-width:520px){.coordinates-grid-wrap{width:min(94vw,470px)}.coordinate-cell{font-size:clamp(12px,3.7vw,19px)}.coordinate-sequence{font-size:13px}.archive-three .page-shell{padding-top:25px}}
-@media(prefers-reduced-motion:reduce){.view-switch{transition:none}}
+@media(max-width:650px){.puzzle-card-center{padding:55px 10px 130px}.puzzle-card-center .tarot-card{width:min(50vw,220px);max-height:50vh}.coordinate-cell{font-size:clamp(13px,3.4vw,20px)}.coordinate-sequence{bottom:20px;font-size:12px;gap:8px}.view-switch{font-size:11px}}
+@media(max-height:550px){.puzzle-card-center{padding:40px 0 85px}.puzzle-card-center .tarot-card{width:min(30vw,160px);max-height:49vh}.coordinate-sequence{bottom:8px}}
