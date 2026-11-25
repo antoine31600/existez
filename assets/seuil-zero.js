@@ -59,7 +59,8 @@ const STORAGE_KEY = 'existence-seuil-zero-stabilise-v1';
     clearInterval(scrambleInterval);
     state = 'warning';
     text.className = 'transmission warning';
-    text.textContent = 'PARTEZ     PARTEZ     PARTEZ';
+    text.textContent = Array(350).fill('PARTEZ').join(' ');
+    document.body.classList.add('warning-active');
     /* Aucun mouvement ni effet sur PARTEZ. */
     button.className = 'witness gone';
     button.disabled = true;
@@ -75,6 +76,7 @@ const STORAGE_KEY = 'existence-seuil-zero-stabilise-v1';
   function showFinal() {
     stable = true;
     state = 'final';
+    document.body.classList.remove('warning-active');
     clearInterval(scrambleInterval);
     clearTimeout(recoveryTimeout);
     text.className = 'transmission final';
