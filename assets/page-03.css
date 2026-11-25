@@ -7,7 +7,7 @@
 .archive-three.coordinate-mode .page-shell{padding:0;min-height:100dvh;overflow:hidden}
 .coordinate-puzzle{position:relative;width:100%;min-height:100dvh;height:100dvh;height:100svh;overflow:hidden;background:radial-gradient(ellipse at center,#1e1620 0%,#030305 80%)}
 .coordinates-grid-wrap{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
-.coordinate-grid{width:100%;height:100%;position:relative;display:grid;grid-template-columns:repeat(9,minmax(0,1fr));grid-template-rows:repeat(9,minmax(0,1fr))}
+.coordinate-grid{width:100%;height:100%;position:relative;display:grid;grid-template-columns:repeat(17,minmax(0,1fr));grid-template-rows:repeat(17,minmax(0,1fr))}
 .coordinate-grid:before,.coordinate-grid:after{content:'';position:absolute;z-index:0;background:#b9a27631;pointer-events:none}
 .coordinate-grid:before{left:50%;top:0;bottom:0;width:1px}
 .coordinate-grid:after{top:50%;left:0;right:0;height:1px}
@@ -34,3 +34,8 @@
 .puzzle-card-center .tarot-inner{position:absolute;inset:0}
 .coordinate-sequence{z-index:12}
 @media(max-width:650px){.puzzle-card-center .tarot-card{width:min(230px,51vw,38vh)}}
+
+/* Grille densifiée : 17 × 17 positions, caractères plus petits. */
+.coordinate-cell{font-size:clamp(9px,1.25vw,16px)}
+.coordinate-cell.origin{font-size:clamp(9px,1.25vw,16px)}
+@media(max-width:650px){.coordinate-cell{font-size:clamp(8px,2.25vw,12px)}}
