@@ -1,0 +1,10 @@
+/* Jour VI : l'italique n'apparait qu'à partir du 7 décembre à Paris. */
+.archive-six .page-shell{padding-bottom:110px}
+.archive-six .prophecy{min-height:185px}
+.archive-six .arcana-space{margin-top:28px}
+.archive-six .secret-text{max-width:760px;margin:85px auto 25px;padding:0 10px;font:clamp(17px,2.2vw,22px)/2.05 Georgia,'Times New Roman',serif;color:#d3c9c1;text-align:justify;text-wrap:pretty}
+.archive-six .secret-text p{margin:0 0 1.5em}
+.archive-six .secret-text [data-italic]{font-style:normal;transition:color 1.2s ease,text-shadow 1.2s ease}
+.archive-six.italics-revealed .secret-text [data-italic]{font-style:italic;color:#e3d8c9;text-shadow:0 0 12px #c59b5923}
+@media(max-width:600px){.archive-six .secret-text{text-align:left;margin-top:58px}}
+@media(prefers-reduced-motion:reduce){.archive-six .secret-text [data-italic]{transition:none}}
