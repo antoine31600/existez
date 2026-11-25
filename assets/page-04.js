@@ -18,7 +18,6 @@ const AUDIO_AFTER = '../assets/audio/jour-04-apres.wav';
 (() => {
   'use strict';
   const audio = document.getElementById('signal-audio');
-  const status = document.getElementById('audio-status');
   const card = document.getElementById('arcana-button');
   if (!audio) return;
   const preview = new URLSearchParams(location.search).get('apercu') === '5decembre';
@@ -64,13 +63,9 @@ const AUDIO_AFTER = '../assets/audio/jour-04-apres.wav';
       await audio.play();
       blocked = false;
       document.body.classList.add('is-playing');
-      if (status) status.textContent = '';
     } catch (error) {
       document.body.classList.remove('is-playing');
       blocked = error && error.name === 'NotAllowedError';
-      if (status) status.textContent = blocked
-        ? 'LA TRANSMISSION ATTEND UNE INTERACTION'
-        : 'FICHIER AUDIO ABSENT OU ILLISIBLE';
     } finally {
       attempting = false;
     }
@@ -87,13 +82,11 @@ const AUDIO_AFTER = '../assets/audio/jour-04-apres.wav';
 
   audio.addEventListener('playing', () => {
     document.body.classList.add('is-playing');
-    if (status) status.textContent = '';
   });
   audio.addEventListener('pause', () => document.body.classList.remove('is-playing'));
   audio.addEventListener('error', () => {
     loadingError = true;
     document.body.classList.remove('is-playing');
-    if (status) status.textContent = 'FICHIER AUDIO ABSENT OU ILLISIBLE';
   });
   document.body.addEventListener('animationend', event => {
     if (event.animationName === 'loop-flicker') document.body.classList.remove('loop-flash');
