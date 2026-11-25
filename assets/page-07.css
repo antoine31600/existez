@@ -1,18 +1,8 @@
-/* JOUR VII — cycle de couleurs à aplats nets, sans dégradé pour permettre un relevé fidèle des HEX. */
+/* JOUR VII — aplats RGB successifs, sans interpolation ni filtre coloré. */
 .archive-seven{background:#030305}
 .archive-seven .page-shell{min-height:100dvh;isolation:isolate}
+.archive-seven.colors-revealed{background-color:var(--active-color,#41D92A)}
 .archive-seven.colors-revealed .page-shell{background:transparent}
-.archive-seven.colors-revealed{animation:existence-colors 12s steps(1,end) infinite;background:var(--color-1,#414243)}
-@keyframes existence-colors{
-  0%,24.999%{background-color:var(--color-1,#414243)}
-  25%,49.999%{background-color:var(--color-2,#444546)}
-  50%,74.999%{background-color:var(--color-3,#474849)}
-  75%,100%{background-color:var(--color-4,#4A4B4C)}
-}
 .archive-seven.colors-revealed .ambient-grain{display:none}
 .archive-seven.colors-revealed .prophecy-placeholder{padding:14px 22px;background:#09070cba;box-shadow:0 0 40px #09070c66;border-radius:3px}
 .archive-seven.colors-revealed .subtle-index{color:#f1ddc2}
-@media(prefers-reduced-motion:reduce){
-  .archive-seven.colors-revealed{animation:none;background:var(--color-1,#414243)}
-}
-/* Défilement couleur synchronisé sur le temps absolu, même après rechargement. */
