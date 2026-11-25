@@ -14,7 +14,12 @@
 .archive-four.is-playing .signal-graphic span:nth-child(2n){animation-delay:.3s}
 .archive-four.is-playing .signal-graphic span:nth-child(3n){animation-delay:.7s}
 @keyframes signal-pulse{to{transform:scaleY(.3);opacity:.45}}
-.signal-button{background:#1a141b;border:1px solid #987c64;color:#e3d5bf;letter-spacing:.17em;font:12px 'Courier New',monospace;padding:16px 24px;min-width:min(290px,90vw);cursor:pointer}
-.signal-button:hover,.signal-button:focus-visible{background:#332530;outline-offset:4px}
 .signal-status{font:11px/1.5 'Courier New',monospace;letter-spacing:.08em;color:#8e8885;min-height:1.5em;margin:0;padding:0 10px}
 @media(prefers-reduced-motion:reduce){.archive-four.is-playing .signal-graphic span{animation:none}}
+
+/* Le 5 décembre : parasite lumineux au raccord de deux lectures. */
+.archive-four .page-shell{isolation:isolate}
+.archive-four .page-shell::before{content:'';position:fixed;inset:0;z-index:20;pointer-events:none;background:repeating-linear-gradient(0deg,#ffffff20 0px,transparent 2px,transparent 7px),radial-gradient(ellipse at 50% 45%,#fff9,transparent 70%);opacity:0;mix-blend-mode:screen}
+.archive-four.loop-flash .page-shell::before{animation:loop-flicker .85s steps(1,end) forwards}
+@keyframes loop-flicker{0%{opacity:0}8%{opacity:.24}12%{opacity:.02}20%{opacity:.39}27%{opacity:0}34%{opacity:.17}38%{opacity:.02}49%{opacity:.32}53%{opacity:.03}60%{opacity:.19}69%{opacity:0}76%{opacity:.11}100%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.archive-four.loop-flash .page-shell::before{animation:none}}
