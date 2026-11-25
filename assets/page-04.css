@@ -1,21 +1,6 @@
 /* Jour IV — transmission sonore, sans paroles narratives ajoutées. */
 .archive-four .page-shell{padding-bottom:100px}
 .archive-four .arcana-space{margin-top:28px}
-.signal-section{position:relative;display:flex;flex-direction:column;align-items:center;gap:20px;margin:65px auto 0;max-width:700px;text-align:center}
-.signal-graphic{display:flex;align-items:center;justify-content:center;gap:7px;height:64px;opacity:.68}
-.signal-graphic span{display:block;width:2px;height:calc(9px + (var(--i,1) * 4px));background:#aa8f73;box-shadow:0 0 7px #915f70a8}
-.signal-graphic span:nth-child(1),.signal-graphic span:nth-child(11){height:12px}
-.signal-graphic span:nth-child(2),.signal-graphic span:nth-child(10){height:27px}
-.signal-graphic span:nth-child(3),.signal-graphic span:nth-child(9){height:43px}
-.signal-graphic span:nth-child(4),.signal-graphic span:nth-child(8){height:19px}
-.signal-graphic span:nth-child(5),.signal-graphic span:nth-child(7){height:52px}
-.signal-graphic span:nth-child(6){height:60px}
-.archive-four.is-playing .signal-graphic span{animation:signal-pulse 1.4s ease-in-out infinite alternate}
-.archive-four.is-playing .signal-graphic span:nth-child(2n){animation-delay:.3s}
-.archive-four.is-playing .signal-graphic span:nth-child(3n){animation-delay:.7s}
-@keyframes signal-pulse{to{transform:scaleY(.3);opacity:.45}}
-.signal-status{font:11px/1.5 'Courier New',monospace;letter-spacing:.08em;color:#8e8885;min-height:1.5em;margin:0;padding:0 10px}
-@media(prefers-reduced-motion:reduce){.archive-four.is-playing .signal-graphic span{animation:none}}
 
 /* Le 5 décembre : parasite lumineux au raccord de deux lectures. */
 .archive-four .page-shell{isolation:isolate}
