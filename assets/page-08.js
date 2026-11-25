@@ -1,7 +1,7 @@
 /*
  * PROJET EXISTENCE — JOUR VIII
  * Activation le 9 décembre 2026 à 00:00 à Paris = 8 décembre 23:00 UTC.
- * Un fragment discret apparaît et permet de télécharger un fichier SVG.
+ * Une zone totalement invisible permet de télécharger un fichier SVG.
  * Le mot de l'URL suivante doit être inscrit dans la métadonnée XMP
  * dc:description du fichier assets/archives/fragment-08.svg.
  * Le mot n'a pas été décidé : [MOT_SECRET_A_DEFINIR] est provisoire.
@@ -51,17 +51,7 @@ const ARTIFACT_FILE = '../assets/archives/fragment-08.svg';
   link.download='fragment-08.svg';
   link.className='artifact-fragment';
   link.setAttribute('aria-label','Récupérer le fragment');
-  link.title='Fragment';
   installDiscoveryCursor(link);
-  const glyph=document.createElement('span');
-  glyph.className='artifact-glyph';
-  glyph.setAttribute('aria-hidden','true');
-  glyph.textContent='◇';
-  const corner=document.createElement('span');
-  corner.className='artifact-corner';
-  corner.setAttribute('aria-hidden','true');
-  corner.textContent='VIII';
-  link.append(glyph,corner);
   mount.append(link);
   mount.hidden=false;
  }
