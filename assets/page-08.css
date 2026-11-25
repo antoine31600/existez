@@ -7,3 +7,15 @@
 .archive-eight .artifact-fragment::before{content:'';position:absolute;inset:8px;border:1px solid #b59b7645;pointer-events:none}
 .archive-eight .artifact-glyph{font:29px/1 Georgia,serif;color:#bba681}
 .archive-eight .artifact-corner{position:absolute;right:4px;bottom:2px;font:9px monospace;opacity:.45}
+
+/* Curseur de découverte : cercle doré discret uniquement sur le fragment. */
+@media(hover:hover) and (pointer:fine){
+  .archive-eight .artifact-fragment{cursor:none}
+  .archive-eight .artifact-fragment *{cursor:none}
+  .artifact-cursor-ring{position:fixed;left:0;top:0;width:32px;height:32px;border:1px solid #c7ac78;border-radius:50%;box-shadow:0 0 8px #c7ac7855,inset 0 0 6px #c7ac7825;transform:translate(-50%,-50%);pointer-events:none;z-index:100;opacity:0;transition:opacity .16s ease}
+  .artifact-cursor-ring.is-visible{opacity:1}
+  .artifact-cursor-ring::after{content:'';position:absolute;inset:14px;border-radius:50%;background:#ebd9b9}
+}
+@media(hover:none), (pointer:coarse){
+  .archive-eight .artifact-fragment:active{transform:rotate(0deg) scale(1.08);border-color:#e0c492;box-shadow:0 0 30px #b99d7b80}
+}
