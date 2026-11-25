@@ -11,7 +11,7 @@
  * GitHub Pages est public : le puzzle et la solution sont visibles dans ce code
  * avant la date. L'horloge du navigateur n'est pas une sécurité.
  */
-const REVEAL_COORDINATES_AT = Date.parse('2026-12-03T23:00:00Z');
+const REVEAL_COORDINATES_AT = Date.parse('2026-11-03T23:00:00Z');
 const COORDINATES = [[2,3],[-3,-1],[4,0],[-1,4],[3,-3],[-2,2],[1,-4]];
 const COORDINATE_WORD = 'ORIGINE';
 (() => {
