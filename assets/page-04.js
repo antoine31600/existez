@@ -1,30 +1,31 @@
 /*
- * PROJET EXISTENCE — JOUR IV / AUDIO
+ * PROJET EXISTENCE — JOUR IV / AUDIO AUTOMATIQUE
+ * Remplacer ces deux fichiers lorsque tu les auras fournis :
+ *    assets/audio/jour-04-avant.wav
+ *    assets/audio/jour-04-apres.wav
  *
- * Déposer les deux fichiers dans le dépôt GitHub :
- *   assets/audio/jour-04-avant.wav
- *   assets/audio/jour-04-apres.wav
+ * Le 5 décembre 2026 à 00:00 à Paris = 4 décembre 23:00 UTC.
+ * Le second fichier produit un bref éclair lumineux à chaque fin de lecture.
+ * Test du second état : ?apercu=5decembre
  *
- * Jusqu'au 4 décembre 2026 inclus à Paris : premier WAV.
- * À partir du 5 décembre 2026, 00:00 à Paris : second WAV.
- * Conversion UTC pour décembre (CET, UTC+1) : 2026-12-04T23:00:00Z.
- *
- * Pour tester sans attendre : /existez/origine/?apercu=5decembre
- * Une page GitHub Pages reste publique, et l'horloge du navigateur est modifiable.
- * Les navigateurs bloquent généralement la lecture avec son avant un clic.
+ * Les navigateurs peuvent interdire l'autoplay avec son avant interaction.
+ * Dans ce cas, le son est tenté au premier clic/toucher/touche, sans bouton audio.
  */
 const SWITCH_AUDIO_AT = Date.parse('2026-12-04T23:00:00Z');
 const AUDIO_BEFORE = '../assets/audio/jour-04-avant.wav';
 const AUDIO_AFTER = '../assets/audio/jour-04-apres.wav';
+
 (() => {
   'use strict';
   const audio = document.getElementById('signal-audio');
-  const toggle = document.getElementById('audio-toggle');
   const status = document.getElementById('audio-status');
   const card = document.getElementById('arcana-button');
+  if (!audio) return;
   const preview = new URLSearchParams(location.search).get('apercu') === '5decembre';
-  let currentFile = null;
-  let wantsToPlay = false;
+  let currentFile = '';
+  let loadingError = false;
+  let attempting = false;
+  let blocked = false;
 
   if (card) card.addEventListener('click', () => {
     const shown = card.classList.toggle('is-revealed');
@@ -33,62 +34,79 @@ const AUDIO_AFTER = '../assets/audio/jour-04-apres.wav';
     card.setAttribute('aria-label', shown ? 'Revoir le dos de la carte' : 'Retourner la carte de tarot');
   });
 
-  function setPlayingUI(playing) {
-    document.body.classList.toggle('is-playing', playing);
-    toggle.textContent = playing ? 'INTERROMPRE LA TRANSMISSION' : 'ÉCOUTER LA TRANSMISSION';
-    toggle.setAttribute('aria-pressed', String(playing));
+  const afterSwitch = () => preview || Date.now() >= SWITCH_AUDIO_AT;
+  const desiredFile = () => afterSwitch() ? AUDIO_AFTER : AUDIO_BEFORE;
+
+  function flash() {
+    if (!afterSwitch()) return;
+    document.body.classList.remove('loop-flash');
+    // Restart CSS animation for every completed loop.
+    void document.body.offsetWidth;
+    document.body.classList.add('loop-flash');
   }
 
-  function chooseFile() {
-    return preview || Date.now() >= SWITCH_AUDIO_AT ? AUDIO_AFTER : AUDIO_BEFORE;
-  }
-
-  function syncFile() {
-    const selected = chooseFile();
-    if (selected === currentFile) return;
-    currentFile = selected;
-    const resume = wantsToPlay;
+  function selectFile() {
+    const next = desiredFile();
+    if (currentFile === next) return false;
+    currentFile = next;
+    loadingError = false;
     audio.pause();
-    audio.src = selected;
+    audio.src = next;
     audio.load();
-    setPlayingUI(false);
-    status.textContent = 'TRANSMISSION EN ATTENTE';
-    if (resume) tryPlay();
+    document.body.classList.remove('loop-flash');
+    return true;
   }
 
-  async function tryPlay() {
-    wantsToPlay = true;
-    syncFile();
+  async function play() {
+    if (attempting || loadingError || !audio.paused) return;
+    attempting = true;
     try {
       await audio.play();
-      if (!audio.paused) {
-        setPlayingUI(true);
-        status.textContent = 'TRANSMISSION EN COURS';
-      }
-    } catch (_) {
-      wantsToPlay = false;
-      setPlayingUI(false);
-      status.textContent = 'AUDIO INDISPONIBLE — VÉRIFIER LE FICHIER';
+      blocked = false;
+      document.body.classList.add('is-playing');
+      if (status) status.textContent = '';
+    } catch (error) {
+      document.body.classList.remove('is-playing');
+      blocked = error && error.name === 'NotAllowedError';
+      if (status) status.textContent = blocked
+        ? 'LA TRANSMISSION ATTEND UNE INTERACTION'
+        : 'FICHIER AUDIO ABSENT OU ILLISIBLE';
+    } finally {
+      attempting = false;
     }
   }
 
-  toggle.addEventListener('click', () => {
-    if (!audio.paused) {
-      wantsToPlay = false;
-      audio.pause();
-      setPlayingUI(false);
-      status.textContent = 'TRANSMISSION INTERROMPUE';
-    } else {
-      tryPlay();
-    }
+  // Contrairement à audio.loop, l'événement ended permet de repérer
+  // précisément la fin de chaque répétition.
+  audio.addEventListener('ended', () => {
+    flash();
+    selectFile();
+    audio.currentTime = 0;
+    play();
   });
+
+  audio.addEventListener('playing', () => {
+    document.body.classList.add('is-playing');
+    if (status) status.textContent = '';
+  });
+  audio.addEventListener('pause', () => document.body.classList.remove('is-playing'));
   audio.addEventListener('error', () => {
-    wantsToPlay = false;
-    setPlayingUI(false);
-    status.textContent = 'FICHIER AUDIO ABSENT OU ILLISIBLE';
+    loadingError = true;
+    document.body.classList.remove('is-playing');
+    if (status) status.textContent = 'FICHIER AUDIO ABSENT OU ILLISIBLE';
   });
-  audio.addEventListener('pause', () => { if (audio.paused) setPlayingUI(false); });
-  syncFile();
-  setInterval(syncFile, 1000);
-  window.addEventListener('pageshow', syncFile);
+  document.body.addEventListener('animationend', event => {
+    if (event.animationName === 'loop-flicker') document.body.classList.remove('loop-flash');
+  });
+
+  // Si la politique du navigateur bloque l'autoplay, un geste quelconque
+  // (y compris retourner la carte) tente de débloquer le son.
+  const unlock = () => { if (blocked || audio.paused) play(); };
+  document.addEventListener('pointerdown', unlock, {passive:true});
+  document.addEventListener('keydown', unlock);
+
+  selectFile();
+  play();
+  setInterval(() => { if (selectFile()) play(); }, 1000);
+  window.addEventListener('pageshow', () => { selectFile(); if (audio.paused) play(); });
 })();
