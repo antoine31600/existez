@@ -16,10 +16,13 @@ const COORDINATE_WORD = 'ORIGINE'; // Réponse provisoire.
     const puzzle = document.getElementById('coordinate-puzzle');
     const grid = document.getElementById('coordinate-grid');
     const sequence = document.getElementById('coordinate-sequence');
+    const cardMount = document.getElementById('puzzle-card-center');
+    const arcana = document.querySelector('#archive-content .arcana');
+    const originalParent = arcana && arcana.parentElement;
     const nav = document.getElementById('view-actions');
     const archiveButton = document.getElementById('view-archive');
     const puzzleButton = document.getElementById('view-puzzle');
-    if (!archive || !puzzle || !grid || !sequence || !nav || !archiveButton || !puzzleButton) return;
+    if (!archive || !puzzle || !grid || !sequence || !nav || !archiveButton || !puzzleButton || !cardMount || !arcana || !originalParent) return;
 
     if (card) {
       card.addEventListener('click', () => {
@@ -61,6 +64,9 @@ const COORDINATE_WORD = 'ORIGINE'; // Réponse provisoire.
     function show(modeRequested) {
       mode = modeRequested;
       const showingPuzzle = mode === 'puzzle';
+      // Même carte dans les deux états : son retournement et sa face sont conservés.
+      if (showingPuzzle && arcana.parentElement !== cardMount) cardMount.appendChild(arcana);
+      if (!showingPuzzle && arcana.parentElement !== originalParent) originalParent.appendChild(arcana);
       archive.hidden = showingPuzzle;
       puzzle.hidden = !showingPuzzle;
       document.body.classList.toggle('coordinate-mode', showingPuzzle);
