@@ -59,7 +59,11 @@ const STORAGE_KEY = 'existence-seuil-zero-stabilise-v1';
     clearInterval(scrambleInterval);
     state = 'warning';
     text.className = 'transmission warning';
-    text.textContent = Array(350).fill('PARTEZ').join(' ');
+    // Répétition sur toute la fenêtre, indépendamment de sa taille.
+    // Utiliser textContent permet de conserver un affichage sûr et statique.
+    const estimatedRows = Math.max(20, Math.ceil(window.innerHeight / 22) + 4);
+    const estimatedColumns = Math.max(8, Math.ceil(window.innerWidth / 75) + 4);
+    text.textContent = Array(estimatedRows * estimatedColumns).fill('PARTEZ').join(' ');
     document.body.classList.add('warning-active');
     /* Aucun mouvement ni effet sur PARTEZ. */
     button.className = 'witness gone';
