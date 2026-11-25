@@ -22,6 +22,27 @@ const ARTIFACT_FILE = '../assets/archives/fragment-08.svg';
   card.setAttribute('aria-pressed',String(shown));
   card.setAttribute('aria-label',shown ? 'Revoir le dos de la carte' : 'Retourner la carte de tarot');
  });
+ function installDiscoveryCursor(link) {
+  // The ring follows the actual pointer, and never intercepts clicks.
+  if (!window.matchMedia || !window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+  const ring = document.createElement('div');
+  ring.className = 'artifact-cursor-ring';
+  ring.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(ring);
+  link.addEventListener('pointerenter', event => {
+    ring.style.left = event.clientX + 'px';
+    ring.style.top = event.clientY + 'px';
+    ring.classList.add('is-visible');
+  });
+  link.addEventListener('pointermove', event => {
+    ring.style.left = event.clientX + 'px';
+    ring.style.top = event.clientY + 'px';
+  });
+  const hide = () => ring.classList.remove('is-visible');
+  link.addEventListener('pointerleave', hide);
+  link.addEventListener('pointercancel', hide);
+  window.addEventListener('blur', hide);
+ }
  function refresh(){
   if (!mount || !(preview || Date.now()>=REVEAL_ARTIFACT_AT)) return;
   if (mount.childElementCount) return;
@@ -31,6 +52,7 @@ const ARTIFACT_FILE = '../assets/archives/fragment-08.svg';
   link.className='artifact-fragment';
   link.setAttribute('aria-label','Récupérer le fragment');
   link.title='Fragment';
+  installDiscoveryCursor(link);
   const glyph=document.createElement('span');
   glyph.className='artifact-glyph';
   glyph.setAttribute('aria-hidden','true');
