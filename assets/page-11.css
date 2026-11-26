@@ -1,0 +1,7 @@
+/* JOUR XI — masque physique ajouré, sans liste de mots sur le site. */
+.archive-eleven .page-shell{padding-bottom:125px}
+.archive-eleven .mask-discovery[hidden]{display:none!important}
+.archive-eleven .mask-discovery{display:flex;align-items:center;justify-content:center;margin:70px auto 18px;padding:12px}
+.archive-eleven .mask-link{display:block;width:min(430px,83vw);aspect-ratio:1/1;box-shadow:0 17px 45px #000a;cursor:pointer;outline-offset:7px}
+.archive-eleven .mask-image{width:100%;height:100%;display:block;object-fit:contain;filter:drop-shadow(0 0 10px #c5a67916)}
+.archive-eleven .mask-link:hover .mask-image,.archive-eleven .mask-link:focus-visible .mask-image{filter:drop-shadow(0 0 12px #c5a67944)}
