@@ -1,0 +1,8 @@
+/* JOUR XXII — chronique de personnages, révélée le 23 décembre. */
+.archive-twentytwo .page-shell{min-height:100dvh;padding-bottom:145px}
+.archive-twentytwo .arcana-text-revelation[hidden]{display:none!important}
+.archive-twentytwo .arcana-text-revelation{width:min(93vw,850px);margin:76px auto 25px;padding:clamp(28px,5vw,58px) clamp(20px,6vw,68px);border:1px solid #9b84565b;background:radial-gradient(ellipse at 50% 10%,#231923a3,#0b0b10e6 83%);box-shadow:0 24px 65px #0008}
+.archive-twentytwo .arcana-manuscript{display:flex;flex-direction:column;gap:clamp(20px,3.8vw,36px)}
+.archive-twentytwo .manuscript-entry{margin:0;color:#dfd1b8;font:clamp(17px,2.4vw,22px)/1.9 Georgia,serif;text-align:left;overflow-wrap:anywhere;text-wrap:pretty}
+.archive-twentytwo .manuscript-entry:not(:last-child):after{content:'✧';display:block;text-align:center;font:17px Georgia,serif;color:#ac946d85;margin-top:24px}
+@media(max-width:630px){.archive-twentytwo .arcana-text-revelation{margin-top:46px}}
