@@ -1,0 +1,9 @@
+/* JOUR XII — portée lumineuse révélée le 13 décembre, sans interaction de décodage. */
+.archive-twelve .page-shell{padding-bottom:125px;min-height:100dvh}
+.archive-twelve .staff-mount[hidden]{display:none!important}
+.archive-twelve .staff-mount{width:min(96vw,1100px);margin:80px auto 35px;padding:14px 16px;background:linear-gradient(90deg,transparent,#0d0e17a8,transparent)}
+.archive-twelve .staff-wrap{width:100%;overflow:hidden}
+.archive-twelve #staff-svg{width:100%;height:auto;display:block;overflow:visible}
+.archive-twelve .staff-line{stroke:#c2b69e;stroke-width:1.35;opacity:.8}
+.archive-twelve .staff-letter{fill:#efe0bb;font:700 29px/1 Georgia,serif;text-anchor:middle;dominant-baseline:middle;paint-order:stroke;stroke:#09080f;stroke-width:5px;stroke-linejoin:round}
+@media(max-width:650px){.archive-twelve .staff-mount{width:100%;margin-top:48px;padding:5px}.archive-twelve .staff-letter{stroke-width:6px}}
