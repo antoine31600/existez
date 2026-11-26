@@ -1,0 +1,9 @@
+/* JOUR XV — six calques transparents disposés en mosaïque. */
+.archive-fifteen .page-shell{min-height:100dvh;padding-bottom:125px}
+.archive-fifteen .fragment-gallery[hidden]{display:none!important}
+.archive-fifteen .fragment-gallery{width:min(94vw,1120px);margin:72px auto 32px}
+.archive-fifteen .fragment-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.archive-fifteen .fragment-tile{display:block;aspect-ratio:2/1;min-width:0;background:linear-gradient(140deg,#13121a,#090a10);border:1px solid #8f7a6042;box-shadow:0 8px 22px #0005;transition:border-color .2s;outline-offset:4px}
+.archive-fifteen .fragment-tile:hover,.archive-fifteen .fragment-tile:focus-visible{border-color:#c3ab7d}
+.archive-fifteen .fragment-tile img{display:block;width:100%;height:100%;object-fit:contain;pointer-events:none}
+@media(max-width:680px){.archive-fifteen .fragment-grid{grid-template-columns:1fr;gap:12px}.archive-fifteen .fragment-gallery{margin-top:48px}}
