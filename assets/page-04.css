@@ -1,10 +1,8 @@
-/* Jour IV — transmission sonore, sans paroles narratives ajoutées. */
-.archive-four .page-shell{padding-bottom:100px}
-.archive-four .arcana-space{margin-top:28px}
-
-/* Le 5 décembre : parasite lumineux au raccord de deux lectures. */
-.archive-four .page-shell{isolation:isolate}
-.archive-four .page-shell::before{content:'';position:fixed;inset:0;z-index:20;pointer-events:none;background:repeating-linear-gradient(0deg,#ffffff20 0px,transparent 2px,transparent 7px),radial-gradient(ellipse at 50% 45%,#fff9,transparent 70%);opacity:0;mix-blend-mode:screen}
-.archive-four.loop-flash .page-shell::before{animation:loop-flicker .85s steps(1,end) forwards}
-@keyframes loop-flicker{0%{opacity:0}8%{opacity:.24}12%{opacity:.02}20%{opacity:.39}27%{opacity:0}34%{opacity:.17}38%{opacity:.02}49%{opacity:.32}53%{opacity:.03}60%{opacity:.19}69%{opacity:0}76%{opacity:.11}100%{opacity:0}}
-@media(prefers-reduced-motion:reduce){.archive-four.loop-flash .page-shell::before{animation:none}}
+/* JOUR IV — une seule séquence numérique, rien d'autre de visible. */
+:root{color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:#030305;color:#ddd1bc}
+body{font-family:'Courier New',monospace}
+.cipher-page{position:relative;min-height:100vh;min-height:100dvh;display:grid;place-items:center;overflow:hidden;padding:24px;background:radial-gradient(ellipse at center,#15111a 0%,#030305 75%)}
+.cipher-grain{position:absolute;inset:0;pointer-events:none;opacity:.13;background:repeating-linear-gradient(0deg,transparent 0 3px,#ffffff08 4px)}
+.cipher-sequence{position:relative;z-index:1;margin:0;max-width:100%;overflow-wrap:anywhere;text-align:center;letter-spacing:clamp(.08em,1vw,.24em);font-size:clamp(24px,5vw,58px);line-height:1.65;text-shadow:0 0 18px #cf9a6840;user-select:text}
