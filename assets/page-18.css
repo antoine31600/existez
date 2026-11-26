@@ -1,0 +1,7 @@
+/* JOUR XVIII : message d'archives avec références temporelles cryptées. */
+.archive-eighteen .page-shell{min-height:100dvh;padding-bottom:132px}
+.archive-eighteen .archive-signal[hidden]{display:none!important}
+.archive-eighteen .archive-signal{width:min(94vw,900px);margin:77px auto 25px;padding:clamp(27px,5vw,60px) clamp(12px,4vw,44px);border:1px solid #88704c4d;background:radial-gradient(ellipse at top,#19151c,#07080c 75%);box-shadow:0 15px 50px #0008}
+.archive-eighteen .archive-signal-inner{display:grid;gap:clamp(20px,3.5vw,33px);text-align:center}
+.archive-eighteen .signal-line{margin:0;font:400 clamp(17px,3.2vw,32px)/1.5 'Courier New',monospace;letter-spacing:.075em;color:#ead6b5;overflow-wrap:anywhere;text-shadow:0 0 17px #cfa56840}
+@media(max-width:650px){.archive-eighteen .archive-signal{margin-top:46px}.archive-eighteen .signal-line{letter-spacing:.02em}}
