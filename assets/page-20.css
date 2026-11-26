@@ -1,0 +1,10 @@
+/* JOUR XX — lien extérieur vers une archive vidéo. */
+.archive-twenty .page-shell{min-height:100dvh;padding-bottom:130px}
+.archive-twenty .video-revelation[hidden],.archive-twenty .video-link[hidden],.archive-twenty .video-pending[hidden]{display:none!important}
+.archive-twenty .video-revelation{width:min(92vw,770px);margin:76px auto 25px}
+.archive-twenty .video-frame{min-height:210px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:25px;padding:34px 22px;background:radial-gradient(ellipse at center,#211a23,#090911 80%);border:1px solid #b1966859;box-shadow:0 15px 45px #0008;text-align:center}
+.archive-twenty .video-symbol{font-size:28px;color:#bda476;border:1px solid #a9926585;width:76px;height:76px;border-radius:50%;display:flex;justify-content:center;align-items:center;padding-left:5px}
+.archive-twenty .video-link{color:#ead7b6;font:12px/1.7 'Courier New',monospace;letter-spacing:.19em;text-decoration:none;border-bottom:1px solid #ab90627d;padding-bottom:7px;outline-offset:5px}
+.archive-twenty .video-link:hover,.archive-twenty .video-link:focus-visible{color:#fff2d9;border-color:#e3c99c}
+.archive-twenty .video-pending{color:#9b917e;font:12px/1.7 'Courier New',monospace;letter-spacing:.1em}
+@media(max-width:620px){.archive-twenty .video-revelation{margin-top:45px}}
