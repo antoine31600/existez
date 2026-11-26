@@ -1,10 +1,2 @@
-/* JOUR XIII — phrases de De Sitter hors du temps. */
-.archive-thirteen .page-shell{padding-bottom:125px}
-.archive-thirteen .sitter-manuscript[hidden]{display:none!important}
-.archive-thirteen .sitter-manuscript{position:relative;width:min(92vw,820px);margin:76px auto 20px;padding:clamp(22px,5vw,60px);background:linear-gradient(145deg,#141019b8,#09090fbf);border:1px solid #ad917544;box-shadow:0 15px 70px #0007}
-.archive-thirteen .sitter-manuscript::before{content:'';pointer-events:none;position:absolute;inset:11px;border:1px solid #cdb1931d}
-.archive-thirteen .sitter-signature{text-align:center;font:12px/1.7 'Courier New',monospace;letter-spacing:.32em;color:#c1a787;margin-bottom:38px}
-.archive-thirteen .sitter-sentences{display:flex;flex-direction:column;gap:clamp(17px,3vw,28px)}
-.archive-thirteen .sitter-sentence{margin:0;color:#ddd0bf;font:clamp(16px,1.9vw,22px)/1.7 Georgia,'Times New Roman',serif;letter-spacing:.012em}
-.archive-thirteen .sitter-sentence::first-letter{color:#e4c79e}
-@media(max-width:650px){.archive-thirteen .sitter-manuscript{margin-top:50px}.archive-thirteen .sitter-signature{margin-bottom:25px}}
+/* JOUR XIII — seule l'ambiance sonore accompagne la prophétie et la carte. */
+.archive-thirteen .page-shell{min-height:100dvh;padding-bottom:125px}
