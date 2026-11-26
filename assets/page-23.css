@@ -1,0 +1,9 @@
+/* JOUR XXIII — dernier questionnement d'Auna. */
+.archive-twentythree .page-shell{min-height:100dvh;padding-bottom:150px}
+.archive-twentythree .auna-question[hidden]{display:none!important}
+.archive-twentythree .auna-question{width:min(92vw,820px);margin:82px auto 28px;padding:clamp(25px,5vw,62px) clamp(20px,6vw,67px);border-top:1px solid #bca4787b;border-bottom:1px solid #bca4787b;background:linear-gradient(90deg,transparent,#18131b9a,transparent);text-align:center}
+.archive-twentythree .auna-attribution{margin:0 0 26px;font:12px/1.5 'Courier New',monospace;letter-spacing:.43em;color:#b7a07b}
+.archive-twentythree .auna-letter{color:#ded1bd;font:clamp(17px,2.6vw,23px)/1.95 Georgia,serif;text-wrap:pretty}
+.archive-twentythree .auna-letter p{margin:0}
+.archive-twentythree .auna-final-question{margin:43px 0 5px;color:#f1e2c6;font:italic clamp(27px,5vw,45px)/1.5 Georgia,serif;text-shadow:0 0 20px #b8987052}
+@media(max-width:600px){.archive-twentythree .auna-question{margin-top:48px}}
