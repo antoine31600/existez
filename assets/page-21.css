@@ -1,0 +1,5 @@
+/* JOUR XXI — Indice du 22 décembre ; texte provisoire rédigé pour tester la mécanique. */
+.archive-twentyone .page-shell{min-height:100dvh;padding-bottom:145px}
+.archive-twentyone .mark-order-revelation[hidden]{display:none!important}
+.archive-twentyone .mark-order-revelation{width:min(91vw,860px);margin:75px auto 30px;padding:36px clamp(18px,4vw,50px);border-top:1px solid #c7a56e77;border-bottom:1px solid #c7a56e77;background:linear-gradient(90deg,transparent,#1a151d99,transparent)}
+.archive-twentyone .mark-order-phrase{text-align:center;font:clamp(19px,3vw,29px)/1.9 Georgia,serif;color:#e9d9bb;font-style:italic;margin:0;text-wrap:pretty;text-shadow:0 0 21px #b9937040}
