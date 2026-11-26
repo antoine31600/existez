@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="160mm" height="80mm" viewBox="0 0 600 300">
+<title>EXISTENCE — Couche 3 sur 6 (prototype)</title>
+<desc>Calque transparent de démonstration. Les six calques ont une taille identique. Le mot secret n'est pas encore défini, remplacer les six calques avant publication définitive.</desc>
+<g fill="none" stroke="#cbb39a" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+<path d="M230 190L284 76L338 190"/>
+</g>
+<g fill="none" stroke="#b79f7a" stroke-width="1.5" opacity=".7">
+<path d="M12 25h22 M23 14v22 M566 25h22 M577 14v22 M12 275h22 M23 264v22 M566 275h22 M577 264v22"/>
+</g>
+</svg>
