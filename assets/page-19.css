@@ -1,0 +1,17 @@
+/* JOUR XIX — faux explorateur, aucun accès au système réel du visiteur. */
+.archive-nineteen .page-shell{min-height:100dvh;padding-bottom:130px}
+.archive-nineteen .vault[hidden]{display:none!important}
+.archive-nineteen .vault{width:min(1160px,96vw);margin:75px auto 20px;border:1px solid #88765768;background:#0a0c12;box-shadow:0 30px 65px #000a;color:#d0c3a8;font:13px/1.6 'Courier New',monospace}
+.archive-nineteen .vault-topbar{display:flex;align-items:center;gap:10px;padding:13px 16px;border-bottom:1px solid #7c6d525e;letter-spacing:.09em;font-size:11px}
+.archive-nineteen .vault-led{width:8px;height:8px;border-radius:50%;background:#99805b;box-shadow:0 0 12px #caa87866}
+.archive-nineteen .vault-state{margin-left:auto;color:#8f887b;font-size:10px}
+.archive-nineteen .vault-layout{display:grid;grid-template-columns:minmax(235px,40%) minmax(0,1fr);min-height:410px}
+.archive-nineteen .vault-nav{padding:12px 8px 20px 11px;border-right:1px solid #7c6d524d;overflow:auto;max-height:570px}
+.archive-nineteen .vault-row{display:flex;align-items:center;width:100%;gap:8px;padding:5px 4px 5px calc(var(--depth)*15px + 5px);border:0;background:transparent;color:#c3b8a5;font:12px/1.4 'Courier New',monospace;text-align:left;cursor:pointer;white-space:nowrap}
+.archive-nineteen .vault-row:hover,.archive-nineteen .vault-row:focus-visible,.archive-nineteen .vault-row.active{background:#c0a6751d;color:#f3d9ae;outline:0}
+.archive-nineteen .vault-row:focus-visible{box-shadow:inset 0 0 0 1px #bca274}
+.archive-nineteen .vault-glyph{color:#b89e6b;flex:none;font-size:14px;min-width:17px}
+.archive-nineteen .vault-preview{min-width:0;display:flex;flex-direction:column}
+.archive-nineteen .vault-filepath{padding:13px 17px;border-bottom:1px solid #7c6d5245;overflow-wrap:anywhere;color:#ddcaa5}
+.archive-nineteen .vault-preview pre{margin:0;padding:22px 18px 34px;color:#c6c1b4;font:13px/1.85 'Courier New',monospace;white-space:pre-wrap;overflow-wrap:anywhere}
+@media(max-width:690px){.archive-nineteen .vault{margin-top:45px}.archive-nineteen .vault-layout{grid-template-columns:1fr}.archive-nineteen .vault-nav{border-right:0;border-bottom:1px solid #7c6d524d;max-height:340px}.archive-nineteen .vault-preview{min-height:210px}.archive-nineteen .vault-row{font-size:12px}}
