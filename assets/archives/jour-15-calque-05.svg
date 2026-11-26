@@ -1,11 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="160mm" height="80mm" viewBox="0 0 600 300">
-<title>EXISTENCE — Couche 5 sur 6 (prototype)</title>
-<desc>Calque transparent de démonstration. Les six calques ont une taille identique. Le mot secret n'est pas encore défini, remplacer les six calques avant publication définitive.</desc>
-<g fill="none" stroke="#cbb39a" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
-<path d="M355 190L410 76L467 190"/>
+<title>EXISTENCE — fragment 5 / 6 (essai de superposition)</title>
+<desc>Calque transparent d'essai, mêmes repères et mêmes dimensions que les autres. À superposer avec opacité variable. Le mot final reste à définir.</desc>
+<!-- Aucun fond : la transparence du SVG est réelle. Les repères sont communs. -->
+<g fill="none" stroke="#c3a9a1" stroke-linecap="round" stroke-linejoin="round">
+<path d="M179.2 191.2L200.6 191.5" stroke-width="2.0" opacity="0.7"/>
+<path d="M195.1 177.9L195.2 241.7" stroke-width="0.7" opacity="0.8"/>
+<path d="M401.9 88.4L374.9 128.6" stroke-width="1.7" opacity="0.6"/>
+<path d="M164.2 217.0L209.1 255.0" stroke-width="2.2" opacity="0.7"/>
+<path d="M224.8 129.9L243.5 167.4" stroke-width="1.7" opacity="0.7"/>
+<path d="M286.0 76.6L268.0 93.6" stroke-width="1.2" opacity="0.6"/>
+<path d="M172.2 226.8L154.2 213.0" stroke-width="2.2" opacity="0.4"/>
+<path d="M558.8 217.9L564.0 255.0" stroke-width="1.7" opacity="0.6"/>
+<path d="M395.6 102.4L342.9 74.8" stroke-width="2.1" opacity="0.5"/>
+<path d="M73.9 142.7L82.4 99.9" stroke-width="2.0" opacity="0.8"/>
+<path d="M425.9 252.6L364.4 214.3" stroke-width="2.3" opacity="0.5"/>
+<path d="M380.8 153.6L355.7 110.8" stroke-width="2.0" opacity="0.8"/>
+<path d="M465.9 183.9L481.8 187.3" stroke-width="1.9" opacity="0.5"/>
+<path d="M290.0 233.1L274.4 154.0" stroke-width="0.9" opacity="0.6"/>
+<path d="M153.9 162.2L109.0 213.4" stroke-width="1.5" opacity="0.5"/>
+<path d="M551.2 145.7L555.0 67.6" stroke-width="1.7" opacity="0.6"/>
+<path d="M368.3 232.2L296.8 235.8" stroke-width="1.4" opacity="0.5"/>
+<path d="M546.6 161.9L498.1 224.4" stroke-width="2.3" opacity="0.5"/>
+<path d="M45.6 257.4L80.2 255.0" stroke-width="1.6" opacity="0.5"/>
+<path d="M420.4 136.2L446.7 129.7" stroke-width="1.7" opacity="0.8"/>
+<path d="M180.4 247.8L174.7 217.9" stroke-width="1.9" opacity="0.7"/>
+<path d="M553.5 118.6L564.0 98.3" stroke-width="1.1" opacity="0.8"/>
+<path d="M380.1 81.4L423.0 78.5" stroke-width="0.7" opacity="0.6"/>
+<path d="M452.2 123.1L480.4 140.7" stroke-width="1.8" opacity="0.5"/>
+<path d="M408.0 154.6L460.9 184.9" stroke-width="0.8" opacity="0.6"/>
+<path d="M310.5 181.4L285.7 205.4" stroke-width="0.9" opacity="0.6"/>
+<path d="M270.0 231.3L210.9 255.0" stroke-width="1.4" opacity="0.8"/>
+<path d="M189.2 140.0L223.4 153.1" stroke-width="1.4" opacity="0.6"/>
+<path d="M454.4 79.2L431.1 103.3" stroke-width="1.8" opacity="0.6"/>
+<path d="M333.3 222.7L344.2 204.4" stroke-width="2.1" opacity="0.7"/>
+<path d="M370.7 133.0L436.4 140.1" stroke-width="1.1" opacity="0.6"/>
+<path d="M475.4 195.0L487.2 242.0" stroke-width="2.3" opacity="0.5"/>
+<path d="M553.4 50.4L548.5 42.0" stroke-width="1.3" opacity="0.8"/>
+<path d="M328.2 205.4L317.5 255.0" stroke-width="0.7" opacity="0.7"/>
+<path d="M78.6 204.5L88.7 146.5" stroke-width="1.0" opacity="0.4"/>
+<path d="M431.3 168.5L449.2 216.9" stroke-width="2.2" opacity="0.7"/>
+<path d="M304.1 197.8L245.9 199.7" stroke-width="0.9" opacity="0.5"/>
+<path d="M540.5 223.0L564.0 224.9" stroke-width="1.4" opacity="0.7"/>
+<path d="M306.1 198.2L261.8 229.5" stroke-width="1.1" opacity="0.7"/>
+<path d="M270.1 103.7L230.0 132.6" stroke-width="1.4" opacity="0.6"/>
+<path d="M142.5 153.9L94.9 172.4" stroke-width="1.7" opacity="0.6"/>
+<path d="M494.5 67.3L456.8 42.0" stroke-width="0.8" opacity="0.6"/>
+<path d="M217.5 203.0L164.3 186.5" stroke-width="1.7" opacity="0.6"/>
 </g>
-<g fill="none" stroke="#b79f7a" stroke-width="1.5" opacity=".7">
-<path d="M12 25h22 M23 14v22 M566 25h22 M577 14v22 M12 275h22 M23 264v22 M566 275h22 M577 264v22"/>
+<g fill="none" stroke="#d7b9a6" stroke-linecap="round" stroke-linejoin="round">
+<path d="M442.0 224.1q56.2 -56.2 95.5 26.8" stroke-width="1.3" opacity="0.7"/>
+<path d="M531.6 172.4q17.8 -17.8 30.3 -2.0" stroke-width="2.0" opacity="0.4"/>
+<path d="M405.6 116.0q-51.0 -51.0 -86.7 -33.3" stroke-width="2.1" opacity="0.5"/>
+<path d="M260.6 240.0q14.6 -14.6 24.9 -1.2" stroke-width="1.5" opacity="0.6"/>
+<path d="M144.5 93.6q56.0 -56.0 95.2 21.0" stroke-width="1.7" opacity="0.5"/>
+<path d="M91.6 228.2q18.1 -18.1 30.7 -5.8" stroke-width="1.1" opacity="0.6"/>
+<path d="M138.1 121.8q18.6 -18.6 31.6 -0.3" stroke-width="2.2" opacity="0.4"/>
+<path d="M309.5 162.4q-14.4 -14.4 -24.5 -10.3" stroke-width="1.9" opacity="0.6"/>
+<path d="M116.0 138.6q-15.5 -15.5 -26.3 8.5" stroke-width="1.3" opacity="0.5"/>
+<path d="M412.0 130.1q18.0 -18.0 30.7 6.8" stroke-width="1.3" opacity="0.6"/>
+<path d="M436.9 164.0q-35.0 -35.0 -59.4 6.6" stroke-width="2.2" opacity="0.6"/>
+<path d="M120.4 233.9q-37.7 -37.7 -64.1 19.3" stroke-width="2.5" opacity="0.6"/>
+</g>
+<g fill="#bc9ca6">
+<circle cx="331.1" cy="76.0" r="2.2" opacity="0.7"/>
+<circle cx="139.7" cy="98.0" r="1.4" opacity="0.4"/>
+<circle cx="277.0" cy="185.0" r="1.1" opacity="0.8"/>
+<circle cx="478.2" cy="137.3" r="3.1" opacity="0.4"/>
+<circle cx="416.2" cy="103.6" r="1.6" opacity="0.6"/>
+<circle cx="398.8" cy="210.7" r="2.9" opacity="0.5"/>
+<circle cx="403.1" cy="105.5" r="1.0" opacity="0.4"/>
+<circle cx="360.7" cy="245.5" r="2.3" opacity="0.4"/>
+<circle cx="513.7" cy="74.1" r="1.1" opacity="0.7"/>
+<circle cx="265.2" cy="87.9" r="1.6" opacity="0.6"/>
+<circle cx="417.3" cy="84.0" r="0.9" opacity="0.6"/>
+<circle cx="92.3" cy="65.1" r="1.1" opacity="0.5"/>
+<circle cx="357.6" cy="206.3" r="1.0" opacity="0.7"/>
+<circle cx="306.1" cy="137.1" r="1.1" opacity="0.6"/>
+<circle cx="517.9" cy="166.7" r="1.4" opacity="0.6"/>
+<circle cx="444.8" cy="168.8" r="3.1" opacity="0.8"/>
+<circle cx="156.7" cy="126.5" r="1.6" opacity="0.5"/>
+<circle cx="120.2" cy="57.8" r="2.7" opacity="0.7"/>
+<circle cx="206.6" cy="51.3" r="3.1" opacity="0.8"/>
+<circle cx="313.7" cy="138.1" r="1.0" opacity="0.7"/>
+<circle cx="363.9" cy="200.8" r="3.2" opacity="0.6"/>
+<circle cx="217.9" cy="173.8" r="2.6" opacity="0.8"/>
+<circle cx="169.6" cy="208.2" r="2.1" opacity="0.8"/>
+<circle cx="183.0" cy="106.0" r="3.1" opacity="0.7"/>
+<circle cx="388.8" cy="123.5" r="1.7" opacity="0.6"/>
+<circle cx="207.3" cy="232.9" r="1.9" opacity="0.4"/>
+<circle cx="462.2" cy="47.0" r="1.8" opacity="0.3"/>
+<circle cx="310.5" cy="190.0" r="2.2" opacity="0.5"/>
+<circle cx="479.0" cy="249.4" r="3.1" opacity="0.7"/>
+<circle cx="146.2" cy="105.8" r="1.9" opacity="0.7"/>
+<circle cx="278.5" cy="92.9" r="1.7" opacity="0.6"/>
+<circle cx="496.6" cy="136.2" r="2.0" opacity="0.5"/>
+<circle cx="433.1" cy="182.6" r="1.9" opacity="0.3"/>
+<circle cx="311.7" cy="63.5" r="1.8" opacity="0.4"/>
+</g>
+<!-- Trame récurrente, presque illisible isolément ; cumulative une fois superposée. -->
+<g fill="none" stroke="#f5e1bf" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" opacity=".36" transform="translate(0.1 0)">
+<path d="M94 94H162 M128 94V187 M201 94V187 M201 94H270 M201 140H258 M201 187H270 M382 101Q361 88 335 95Q304 104 317 133Q328 146 350 147Q387 151 380 174Q369 195 317 184 M430 94H505 M467 94V187"/>
+</g>
+<!-- Repères fixes de calage, non codants. -->
+<g fill="none" stroke="#e6c8a1" stroke-width="1.6" opacity=".9">
+<path d="M10 22H36 M23 9V35 M564 22H590 M577 9V35 M10 278H36 M23 265V291 M564 278H590 M577 265V291"/>
+<circle cx="300" cy="20" r="6"/><circle cx="300" cy="280" r="6"/>
 </g>
 </svg>
