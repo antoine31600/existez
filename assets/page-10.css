@@ -1,0 +1,10 @@
+/* Jour X — transmission sonore, sans paroles narratives ajoutées. */
+.archive-ten .page-shell{padding-bottom:100px}
+.archive-ten .arcana-space{margin-top:28px}
+
+/* Le 11 décembre : parasite lumineux au raccord de deux lectures. */
+.archive-ten .page-shell{isolation:isolate}
+.archive-ten .page-shell::before{content:'';position:fixed;inset:0;z-index:20;pointer-events:none;background:repeating-linear-gradient(0deg,#ffffff20 0px,transparent 2px,transparent 7px),radial-gradient(ellipse at 50% 45%,#fff9,transparent 70%);opacity:0;mix-blend-mode:screen}
+.archive-ten.loop-flash .page-shell::before{animation:loop-flicker .85s steps(1,end) forwards}
+@keyframes loop-flicker{0%{opacity:0}8%{opacity:.24}12%{opacity:.02}20%{opacity:.39}27%{opacity:0}34%{opacity:.17}38%{opacity:.02}49%{opacity:.32}53%{opacity:.03}60%{opacity:.19}69%{opacity:0}76%{opacity:.11}100%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.archive-ten.loop-flash .page-shell::before{animation:none}}
