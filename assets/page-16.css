@@ -1,0 +1,6 @@
+/* JOUR XVI — Une formule, pas de lanceur de dés interactif. */
+.archive-sixteen .page-shell{min-height:100dvh;padding-bottom:115px}
+.archive-sixteen .dice-revelation[hidden]{display:none!important}
+.archive-sixteen .dice-revelation{display:flex;align-items:center;justify-content:center;margin:80px auto 20px;padding:30px 18px;max-width:90vw}
+.archive-sixteen .dice-expression{margin:0;font:clamp(40px,8vw,90px)/1.2 'Courier New',monospace;letter-spacing:.11em;color:#e9d2a5;text-shadow:0 0 18px #d5a86a55,0 0 60px #b27f4322;user-select:text}
+@media(max-width:600px){.archive-sixteen .dice-revelation{margin-top:45px}}
