@@ -4,12 +4,12 @@
  * soit 20 décembre 2026 à 23:00 UTC.
  * Prévisualisation : ?apercu=21decembre
  *
- * À compléter : coller l'URL exacte de la vidéo YouTube dans VIDEO_URL.
- * Aucun lien factice ne sera ouvert tant que l'URL n'est pas fournie.
+ * URL de la vidéo fournie par l'auteur ; les lettres du chat et le profil
+ * de jeu sont des éléments à vérifier dans les contenus externes.
  * Ne pas inscrire la solution ou les étapes cachées de l'énigme sur la page.
  */
 const VIDEO_REVEAL_AT=Date.parse('2026-12-20T23:00:00Z');
-const VIDEO_URL='';
+const VIDEO_URL='https://www.youtube.com/watch?v=dIpr-SH_Dfo';
 (() => {
  'use strict';
  const card=document.getElementById('arcana-button');
