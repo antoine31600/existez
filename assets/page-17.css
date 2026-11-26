@@ -1,0 +1,9 @@
+/* JOUR XVII — fausse équation Unicode, révélée le 18 décembre. */
+.archive-seventeen .page-shell{min-height:100dvh;padding-bottom:130px}
+.archive-seventeen .unicode-revelation[hidden]{display:none!important}
+.archive-seventeen .unicode-revelation{width:min(94vw,980px);margin:76px auto 25px;padding:clamp(26px,5vw,56px) clamp(14px,4vw,42px);border:1px solid #8b765b44;background:linear-gradient(150deg,#101019cc,#06070dc9);box-shadow:0 15px 50px #0006;text-align:center;color:#e9d6b2;font-family:'Courier New',monospace}
+.archive-seventeen .unicode-equivalences{display:grid;gap:22px;justify-items:center}
+.archive-seventeen .unicode-equivalences p{font-size:clamp(19px,3.7vw,36px);letter-spacing:.075em;margin:0;font-weight:400;white-space:nowrap}
+.archive-seventeen .unicode-divider{height:1px;max-width:640px;margin:37px auto;background:linear-gradient(90deg,transparent,#baa17d70,transparent)}
+.archive-seventeen .unicode-question{font-size:clamp(15px,2.9vw,31px);font-weight:400;letter-spacing:.045em;line-height:1.65;overflow-wrap:anywhere;margin:0;text-shadow:0 0 20px #c5986640;user-select:text}
+@media(max-width:620px){.archive-seventeen .unicode-revelation{margin-top:46px}.archive-seventeen .unicode-divider{margin:26px auto}}
