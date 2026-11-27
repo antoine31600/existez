@@ -6,7 +6,7 @@
  * Ils doivent être superposés SANS redimensionnement ni rotation.
  * Chaque image de la grille peut être téléchargée séparément par clic.
  *
- * PROTOTYPE : les calques possèdent des trames communes discrètes et des
+ * PROTOTYPE : les calques possèdent des tracés utiles répartis entre les couches et des
  * parasites distincts. Une superposition avec opacité réduite est nécessaire
  * pour distinguer un mot de démonstration (NON définitif).
  * Le mot de la prochaine URL reste à fournir par l'auteur.
@@ -15,7 +15,7 @@
  * Aperçu : ?apercu=16decembre
  */
 const FRAGMENT_REVEAL_AT=Date.parse('2026-12-15T23:00:00Z');
-const FRAGMENT_FILES=Array.from({length:6},(_,i)=>'../assets/archives/jour-15-calque-'+String(i+1).padStart(2,'0')+'.svg?v=2');
+const FRAGMENT_FILES=Array.from({length:6},(_,i)=>'../assets/archives/jour-15-calque-'+String(i+1).padStart(2,'0')+'.svg?v=3');
 (() => {
  'use strict';
  const card=document.getElementById('arcana-button');
