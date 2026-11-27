@@ -15,8 +15,8 @@ body.existence-illustrated::before{
   background-image:var(--palace-image);
   background-repeat:no-repeat;
   background-position:center center;
-  /* Keep source pixels near 1:1 instead of enlarging a 1254px image to 2K/4K. */
-  background-size:min(100vw, 1254px) auto;
+  /* L'image couvre intégralement l'écran, en conservant ses proportions. */
+  background-size:cover;
   image-rendering:auto;
   opacity:var(--palace-opacity,.32);
 }
