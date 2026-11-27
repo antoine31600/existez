@@ -16,10 +16,10 @@
  *    - T1: outils/trace_ancienne.hex ligne [81C] : 43 en hex = C ;
  *      relier par la signature XPTRJVQ ? MKLZ.
  * 6. Lire le caractère de la TRAME au CURSEUR (index à partir de 1)
- *    puis suivre l'ordre du registre pour récupérer ABSENCE.
+ *    puis suivre l'ordre du registre pour récupérer JUSTICE.
  *    Le nom reconstitué est celui du dossier manquant.
  *
- * Le mot "ABSENCE", tous les identifiants et les contenus sont PROVISOIRES.
+ * Le mot "JUSTICE", tous les identifiants et les contenus sont PROVISOIRES.
  * Le site n'offre ni validation, ni révélateur automatique du résultat.
  */
 const VAULT_REVEAL_AT=Date.parse('2026-12-19T23:00:00Z');
@@ -31,7 +31,7 @@ const record=(id,body,index)=>{
  const trame=cut===undefined?body.noise:body.noise.slice(0,cut)+'?' +body.noise.slice(cut+1);
  return F(body.name,'UNITÉ SCELLÉE / ARCHIVE BINAIRE\n------------------------------\nIDENTIFIANT : '+id+'\nSTATUT : '+(cut===undefined?'RECONSTRUCTION PARTIELLE':'DONNÉE LACUNAIRE')+'\nTRAME : '+trame+'\nCURSEUR : '+String(body.pos).padStart(2,'0')+'\nDIAGNOSTIC : '+(cut!==undefined?'OCTET PERDU — SOURCE SECONDAIRE REQUISE':(index?'LECTURE INTERROMPUE':'ANCIENNE COPIE')));
 };
-const records={"Q7":{"name":"echo_034.bin","noise":"RMLTAVQPXZKD","pos":5},"F2":{"name":"porte_basse.bin","noise":"VQZTRHLPBMXN","pos":9},"M9":{"name":"empreinte_07.bin","noise":"NFSQXJPVMLRD","pos":3},"R4":{"name":"echo_089.bin","noise":"JKMNQVRTYPEX","pos":11},"A6":{"name":"horloge_13.bin","noise":"ZPVQANJLMRTX","pos":6},"T1":{"name":"trace_noire.bin","noise":"XPTRJVQCMKLZ","pos":8},"L8":{"name":"horloge_04.bin","noise":"VEQTMZPJRKLX","pos":2},"U5":{"name":"echo_copie.bin","noise":"VQMTHJPZRKLD","pos":3},"Z0":{"name":"porte_veille.bin","noise":"ZRTWXLMPJKQD","pos":9},"X3":{"name":"empreinte_ancienne.bin","noise":"MBQTRVXNPZLH","pos":2},"P8":{"name":"horloge_test.bin","noise":"KLMVRTWQNZPX","pos":7},"N4":{"name":"seuil_012.bin","noise":"PXLMKQTRNVZW","pos":5},"B1":{"name":"murmure.bin","noise":"JXQPRNTVZKLM","pos":4}}; 
+const records={"Q7":{"name":"echo_034.bin","noise":"RMLTJVQPXZKD","pos":5},"F2":{"name":"porte_basse.bin","noise":"VQZTRHLPUMXN","pos":9},"M9":{"name":"empreinte_07.bin","noise":"NFSQXJPVMLRD","pos":3},"R4":{"name":"echo_089.bin","noise":"JKMNQVRTYPTX","pos":11},"A6":{"name":"horloge_13.bin","noise":"ZPVQAIJLMRTX","pos":6},"T1":{"name":"trace_noire.bin","noise":"XPTRJVQCMKLZ","pos":8},"L8":{"name":"horloge_04.bin","noise":"VEQTMZPJRKLX","pos":2},"U5":{"name":"echo_copie.bin","noise":"VQMTHJPZRKLD","pos":3},"Z0":{"name":"porte_veille.bin","noise":"ZRTWXLMPJKQD","pos":9},"X3":{"name":"empreinte_ancienne.bin","noise":"MBQTRVXNPZLH","pos":2},"P8":{"name":"horloge_test.bin","noise":"KLMVRTWQNZPX","pos":7},"N4":{"name":"seuil_012.bin","noise":"PXLMKQTRNVZW","pos":5},"B1":{"name":"murmure.bin","noise":"JXQPRNTVZKLM","pos":4}}; 
 const tree=D('EXISTENCE',[
  F('journal_systeme.log','ÉTAT DES ARCHIVES\n----------------\nUne entrée du répertoire /EXISTENCE/archives/ a été effacée.\nLe nom du répertoire a disparu des sauvegardes ordinaires.\nLe service de reprise a laissé une file d\u2019attente dans le catalogue.\nLa restauration a été interrompue avant l\u2019assemblage.'),
  F('etat.txt','Mode : consultation seule.\nRépertoire indisponible : /EXISTENCE/archives/[SUPPRIMÉ]/\nNote : aucune fonction de réparation n\u2019est disponible.'),
@@ -77,7 +77,7 @@ const tree=D('EXISTENCE',[
   ])
  ]),
  D('discussions',[
-  F('canal_veille.chat','CANAL DE VEILLE / COPIE DÉCLASSÉE\n--------------------------------\n[18:43] L. : La mémoire revient toujours par morceaux.\n[18:47] N. : J\u2019ai noté ce que la console murmurait avant le noir : VQZTRH.\n[18:49] L. : Tu es certain de ce début ?\n[18:51] N. : Le reste était sur le papier plié : LPBMXN.\n[18:58] L. : Ne recopie pas tout au même endroit. Une seule version suffit pour attirer l\u2019attention.'),
+  F('canal_veille.chat','CANAL DE VEILLE / COPIE DÉCLASSÉE\n--------------------------------\n[18:43] L. : La mémoire revient toujours par morceaux.\n[18:47] N. : J\u2019ai noté ce que la console murmurait avant le noir : VQZTRH.\n[18:49] L. : Tu es certain de ce début ?\n[18:51] N. : Le reste était sur le papier plié : LPUMXN.\n[18:58] L. : Ne recopie pas tout au même endroit. Une seule version suffit pour attirer l\u2019attention.'),
   F('canal_general.chat','CANAL GÉNÉRAL\n--------------\n[09:10] Archiviste : Un lot complet a été classé en attente.\n[09:24] Opérateur : Certains fichiers semblent vides, mais les anciennes conversations restent lisibles.\n[09:38] Archiviste : Les copies ne sont pas toutes fiables.'),
   F('journal_equipe.chat','DISCUSSION / RELÈVE\n------------------\n[07:02] Archiviste : Le registre comporte plusieurs unités différentes.\n[07:12] Opérateur : Ne prenez pas les identifiants pour des mots.\n[07:17] Archiviste : La synchronisation reprendra après le contrôle.'),
   F('brouillon_prive.chat','BROUILLON DE DISCUSSION\n---------------------\n[22:08] Opérateur : Une archive peut survivre dans un message que personne n\u2019avait pensé à supprimer.')
@@ -85,7 +85,7 @@ const tree=D('EXISTENCE',[
  D('cache',[
   D('lecteur',[
    F('paquet_4a.part1','BUFFER PARTIEL / 4A\nDATA : JKMNQV'),
-   F('paquet_4a.part2','BUFFER PARTIEL / 4A\nDATA : RTYPEX'),
+   F('paquet_4a.part2','BUFFER PARTIEL / 4A\nDATA : RTYPTX'),
    F('paquet_7c.part1','BUFFER PARTIEL / 7C\nDATA : MNPXQZ'),
    F('paquet_7c.part2','BUFFER PARTIEL / 7C\nDATA : LQMWER'),
    F('paquet_9f.part1','BUFFER PARTIEL / 9F\nDATA : XPTRJV'),
