@@ -1,27 +1,4 @@
-/*
- * EXISTENCE — JOUR XIX — ENQUÊTE À CINQ ÉTAPES (VERSION 2)
- * 20 décembre 2026 à 00:00 Paris = 19 décembre à 23:00 UTC.
- * Aperçu : ?apercu=20decembre
- *
- * SOLUTION DE DÉMONSTRATION (réservée à l'auteur) :
- * 1. Journal système : un dossier manque et une file de restauration subsiste.
- * 2. catalogue/relance.queue donne, DANS LE BON ORDRE, sept identifiants.
- * 3. catalogue/localisation.idx fournit les chemins relatifs depuis /catalogue/.
- * 4. Les données utiles se trouvent dans les fichiers .bin correspondants ;
- *    six autres fichiers .bin sont des leurres, plus les journaux sans intérêt.
- * 5. Trois trames importantes ont perdu le caractère utile :
- *    - F2: conversation / discussions/canal_veille.chat fournit deux moitiés.
- *    - R4: cache/lecteur/paquet_4a.part1 et part2, noms sans lien direct,
- *      à reconnaître en comparant les motifs à l'original lacunaire.
- *    - T1: outils/trace_ancienne.hex ligne [81C] : 43 en hex = C ;
- *      relier par la signature XPTRJVQ ? MKLZ.
- * 6. Lire le caractère de la TRAME au CURSEUR (index à partir de 1)
- *    puis suivre l'ordre du registre pour récupérer JUSTICE.
- *    Le nom reconstitué est celui du dossier manquant.
- *
- * Le mot "JUSTICE", tous les identifiants et les contenus sont PROVISOIRES.
- * Le site n'offre ni validation, ni révélateur automatique du résultat.
- */
+/* Jour XIX : récupération de fichiers endommagés, apercu=20decembre. Résolution documentée dans les notes de l'organisateur, pas dans le code public. */
 const VAULT_REVEAL_AT=Date.parse('2026-12-19T23:00:00Z');
 const F=(name,body)=>({name,body});
 const D=(name,children)=>({name,children});

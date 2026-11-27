@@ -5,8 +5,8 @@
  * Au 13 décembre 2026 00:00 à Paris (12 décembre 23:00 UTC),
  * cinq lignes apparaissent, avec une lettre associée à chaque hauteur musicale.
  *
- * Mélodie instrumentale de démonstration générée pour O P I L I O N.
- * L'auteur peut la remplacer par une composition de son choix.
+ * Une mélodie instrumentale provisoire et la portée correspondante sont fournies.
+ * L'auteur peut remplacer le morceau par sa propre composition.
  * Les lettres A à I ci-dessous ne sont qu'un exemple à remplacer.
  *
  * La portée suit la clef de sol standard (sans la dessiner) :

@@ -7,7 +7,7 @@
  * La notation de l'énigme U+(44+45+53+54+49+4E) n'est pas une
  * expression Unicode standard : chaque bloc hexadécimal doit être
  * compris individuellement comme un code U+00XX.
- * Exemple provisoire : SECRET. À remplacer par le mot définitif.
+ * Exemple remplacé par le code choisi par l'auteur. À remplacer par le mot définitif.
  * Aucun décodeur ni validateur n'est intégré au site.
  * Prévisualisation : ?apercu=18decembre
  */
