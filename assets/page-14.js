@@ -10,7 +10,7 @@
  * L'audio ne comporte volontairement aucun contrôle visible.
  */
 const MORSE_REVEAL_AT=Date.parse('2026-12-14T23:00:00Z'); // 15 décembre minuit, Paris.
-const MORSE_AUDIO='../assets/audio/jour-14-spectrogramme-morse.wav';
+const MORSE_AUDIO='../assets/audio/jour-14-spectrogramme-morse.wav?v=2';
 (() => {
  'use strict';
  const card=document.getElementById('arcana-button');

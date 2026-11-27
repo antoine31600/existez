@@ -10,7 +10,7 @@
  * Note : fichiers GitHub Pages publiquement accessibles par URL.
  */
 const REVEAL_ARTIFACT_AT = Date.parse('2026-12-08T23:00:00Z');
-const ARTIFACT_FILE = '../assets/archives/fragment-08.svg';
+const ARTIFACT_FILE = '../assets/archives/fragment-08.svg?v=2';
 (() => {
  'use strict';
  const card = document.getElementById('arcana-button');

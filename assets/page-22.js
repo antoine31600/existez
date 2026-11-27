@@ -16,7 +16,7 @@
  * explicitement une autre convention avant de rédiger le mot final.
  * L'association Deck of Many Things <-> tarot dépend du deck du JDR :
  * elle DOIT être confirmée par l'auteur pour chaque personnage.
- * Les six passages sont des placeholders, pas des indices réels.
+ * Les sept passages sont des placeholders, pas des indices réels.
  */
 const ARCANA_TEXT_REVEAL_AT=Date.parse('2026-12-22T23:00:00Z');
 (() => {
