@@ -6,3 +6,5 @@ body{font-family:'Courier New',monospace}
 .cipher-page{position:relative;min-height:100vh;min-height:100dvh;display:grid;place-items:center;overflow:hidden;padding:24px;background:radial-gradient(ellipse at center,#15111a 0%,#030305 75%)}
 .cipher-grain{position:absolute;inset:0;pointer-events:none;opacity:.13;background:repeating-linear-gradient(0deg,transparent 0 3px,#ffffff08 4px)}
 .cipher-sequence{position:relative;z-index:1;margin:0;max-width:100%;overflow-wrap:anywhere;text-align:center;letter-spacing:clamp(.08em,1vw,.24em);font-size:clamp(24px,5vw,58px);line-height:1.65;text-shadow:0 0 18px #cf9a6840;user-select:text}
+
+.cipher-sequence[hidden]{display:none!important}
