@@ -1,0 +1,63 @@
+/* EXISTENCE — paliers de fond : jours 07–13, 14–20, 21–24.
+ * Les images WebP correspondantes doivent être déposées dans assets/backgrounds/.
+ * Les pages 01–06 conservent leur fond initial.
+ */
+body.existence-illustrated{
+  background:#030305;
+  isolation:isolate;
+}
+body.existence-illustrated::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  background-image:var(--palace-image);
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-size:cover;
+  opacity:var(--palace-opacity,.32);
+}
+body.existence-illustrated::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  background:linear-gradient(90deg,rgba(0,0,0,.39),rgba(0,0,0,.17) 50%,rgba(0,0,0,.39));
+}
+body.existence-illustrated > main{
+  position:relative;
+  z-index:1;
+  background:transparent!important;
+}
+body.existence-illustrated .page-shell{
+  background:transparent!important;
+}
+body.existence-illustrated .ambient-grain{pointer-events:none}
+body.existence-illustrated .night-sky{
+  background:transparent!important;
+}
+body.existence-illustrated.palace-stage-one{
+  --palace-image:url("./backgrounds/palais-jours-07-13.webp");
+  --palace-opacity:.53;
+}
+body.existence-illustrated.palace-stage-two{
+  --palace-image:url("./backgrounds/palais-jours-14-20.webp");
+  --palace-opacity:.39;
+}
+body.existence-illustrated.palace-stage-three{
+  --palace-image:url("./backgrounds/palais-jours-21-24.webp");
+  --palace-opacity:.25;
+}
+@media(max-width:700px){
+  body.existence-illustrated::before{background-position:center center}
+  body.existence-illustrated::after{background:rgba(0,0,0,.37)}
+}
+@media print{
+  body.existence-illustrated::before,
+  body.existence-illustrated::after{display:none}
+}
+/* Le puzzle RGB du jour 7 doit conserver ses couleurs entièrement visibles. */
+body.existence-illustrated.archive-seven.colors-revealed::before,
+body.existence-illustrated.archive-seven.colors-revealed::after{display:none}
