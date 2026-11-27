@@ -98,9 +98,9 @@
 <circle cx="96.5" cy="217.0" r="1.1" opacity="0.5"/>
 <circle cx="249.0" cy="55.6" r="3.0" opacity="0.6"/>
 </g>
-<!-- Trame récurrente, presque illisible isolément ; cumulative une fois superposée. -->
-<g fill="none" stroke="#f5e1bf" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" opacity=".36" transform="translate(0.2 0)">
-<path d="M94 94H162 M128 94V187 M201 94V187 M201 94H270 M201 140H258 M201 187H270 M382 101Q361 88 335 95Q304 104 317 133Q328 146 350 147Q387 151 380 174Q369 195 317 184 M430 94H505 M467 94V187"/>
+<!-- Segments partiels : un calque seul ne contient pas le mot entier. -->
+<g fill="none" stroke="#f5e1bf" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" opacity=".92" transform="translate(0.2 0)">
+<path d="M467 94H505 M467 94V140 M467 140V187"/>
 </g>
 <!-- Repères fixes de calage, non codants. -->
 <g fill="none" stroke="#e6c8a1" stroke-width="1.6" opacity=".9">
