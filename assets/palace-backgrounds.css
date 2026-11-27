@@ -15,7 +15,9 @@ body.existence-illustrated::before{
   background-image:var(--palace-image);
   background-repeat:no-repeat;
   background-position:center center;
-  background-size:cover;
+  /* Keep source pixels near 1:1 instead of enlarging a 1254px image to 2K/4K. */
+  background-size:min(100vw, 1254px) auto;
+  image-rendering:auto;
   opacity:var(--palace-opacity,.32);
 }
 body.existence-illustrated::after{
@@ -24,7 +26,7 @@ body.existence-illustrated::after{
   inset:0;
   z-index:0;
   pointer-events:none;
-  background:linear-gradient(90deg,rgba(0,0,0,.39),rgba(0,0,0,.17) 50%,rgba(0,0,0,.39));
+  background:linear-gradient(90deg,rgba(0,0,0,.17),rgba(0,0,0,.05) 50%,rgba(0,0,0,.17));
 }
 body.existence-illustrated > main{
   position:relative;
@@ -40,19 +42,19 @@ body.existence-illustrated .night-sky{
 }
 body.existence-illustrated.palace-stage-one{
   --palace-image:url("./backgrounds/palais-jours-07-13.webp");
-  --palace-opacity:.53;
+  --palace-opacity:.82;
 }
 body.existence-illustrated.palace-stage-two{
   --palace-image:url("./backgrounds/palais-jours-14-20.webp");
-  --palace-opacity:.39;
+  --palace-opacity:.72;
 }
 body.existence-illustrated.palace-stage-three{
   --palace-image:url("./backgrounds/palais-jours-21-24.webp");
-  --palace-opacity:.25;
+  --palace-opacity:.63;
 }
 @media(max-width:700px){
   body.existence-illustrated::before{background-position:center center}
-  body.existence-illustrated::after{background:rgba(0,0,0,.37)}
+  body.existence-illustrated::after{background:rgba(0,0,0,.14)}
 }
 @media print{
   body.existence-illustrated::before,
