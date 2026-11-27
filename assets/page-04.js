@@ -13,9 +13,12 @@
  * Seuls les chiffres apparaissent à l'écran : pas de décodeur ni d'indice
  * ajouté automatiquement. Attention, 2 chiffres limitent une paire à 99.
  */
+const CIPHER_REVEAL_AT=Date.parse('2026-12-04T23:00:00Z'); // 5 décembre à minuit, Paris.
 const CIPHER_SEQUENCE = '275481'; // À REMPLACER par la véritable suite.
 (() => {
  'use strict';
  const node = document.getElementById('cipher-sequence');
- if(node) node.textContent=CIPHER_SEQUENCE;
+ const preview=new URLSearchParams(location.search).get('apercu')==='5decembre';
+ function refresh(){if(node){node.textContent=CIPHER_SEQUENCE;node.hidden=!(preview||Date.now()>=CIPHER_REVEAL_AT)}}
+ refresh();setInterval(refresh,1000);window.addEventListener('pageshow',refresh);
 })();
