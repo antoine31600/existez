@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="160mm" height="80mm" viewBox="0 0 600 300">
 <title>EXISTENCE — fragment 2 / 6 (essai de superposition)</title>
-<desc>Calque transparent d'essai, mêmes repères et mêmes dimensions que les autres. À superposer avec opacité variable. Le mot final reste à définir.</desc>
+<desc>Calque transparent d'essai, mêmes repères et mêmes dimensions que les autres. À superposer avec opacité variable. Le mot en construction, réparti entre les six calques.</desc>
 <!-- Aucun fond : la transparence du SVG est réelle. Les repères sont communs. -->
 <g fill="none" stroke="#c3a9a1" stroke-linecap="round" stroke-linejoin="round">
 <path d="M134.4 220.6L209.8 245.6" stroke-width="0.8" opacity="0.7"/>
@@ -100,7 +100,7 @@
 </g>
 <!-- Segments partiels : un calque seul ne contient pas le mot entier. -->
 <g fill="none" stroke="#f5e1bf" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" opacity=".92" transform="translate(-0.1 0)">
-<path d="M128 94H162 M201 94H270 M335 95Q304 104 317 133"/>
+<path d="M80 86H142 M235 86V204 M265 86H325"/>
 </g>
 <!-- Repères fixes de calage, non codants. -->
 <g fill="none" stroke="#e6c8a1" stroke-width="1.6" opacity=".9">
