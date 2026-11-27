@@ -5,7 +5,8 @@
  * Au 13 décembre 2026 00:00 à Paris (12 décembre 23:00 UTC),
  * cinq lignes apparaissent, avec une lettre associée à chaque hauteur musicale.
  *
- * La mélodie, les lettres et le mot final sont À DÉFINIR par l'auteur.
+ * Mélodie instrumentale de démonstration générée pour O P I L I O N.
+ * L'auteur peut la remplacer par une composition de son choix.
  * Les lettres A à I ci-dessous ne sont qu'un exemple à remplacer.
  *
  * La portée suit la clef de sol standard (sans la dessiner) :
@@ -20,15 +21,15 @@
 const REVEAL_STAFF_AT = Date.parse('2026-12-12T23:00:00Z');
 const MELODY_FILE = '../assets/audio/jour-12-melodie.wav';
 const LETTERS_BY_PITCH = [
-  {pitch:'F5',letter:'A',x:130,y:64},
-  {pitch:'E5',letter:'B',x:217,y:80},
-  {pitch:'D5',letter:'C',x:304,y:96},
-  {pitch:'C5',letter:'D',x:391,y:112},
-  {pitch:'B4',letter:'E',x:478,y:128},
-  {pitch:'A4',letter:'F',x:565,y:144},
-  {pitch:'G4',letter:'G',x:652,y:160},
-  {pitch:'F4',letter:'H',x:739,y:176},
-  {pitch:'E4',letter:'I',x:826,y:192}
+  {pitch:'F5',letter:'O',x:130,y:64},
+  {pitch:'E5',letter:'P',x:217,y:80},
+  {pitch:'D5',letter:'I',x:304,y:96},
+  {pitch:'C5',letter:'L',x:391,y:112},
+  {pitch:'B4',letter:'N',x:478,y:128},
+  {pitch:'A4',letter:'Q',x:565,y:144},
+  {pitch:'G4',letter:'S',x:652,y:160},
+  {pitch:'F4',letter:'T',x:739,y:176},
+  {pitch:'E4',letter:'U',x:826,y:192}
 ];
 (() => {
  'use strict';
