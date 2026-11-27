@@ -6,7 +6,7 @@
  */
 const REVEAL_COORDINATES_AT = Date.parse('2026-12-03T23:00:00Z');
 const COORDINATES = [[2,3],[-3,-1],[4,0],[-1,4],[3,-3],[-2,2],[1,-4]];
-const COORDINATE_WORD = 'ORIGINE'; // Réponse provisoire.
+const COORDINATE_WORD = 'HERAULT'; // Réponse provisoire.
 
 (() => {
   'use strict';

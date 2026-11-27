@@ -14,7 +14,7 @@
  * ajouté automatiquement. Attention, 2 chiffres limitent une paire à 99.
  */
 const CIPHER_REVEAL_AT=Date.parse('2026-12-04T23:00:00Z'); // 5 décembre à minuit, Paris.
-const CIPHER_SEQUENCE = '275481'; // À REMPLACER par la véritable suite.
+const CIPHER_SEQUENCE = '56310981355605'; // À REMPLACER par la véritable suite.
 (() => {
  'use strict';
  const node = document.getElementById('cipher-sequence');

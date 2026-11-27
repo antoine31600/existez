@@ -4,7 +4,7 @@
  * = 17 décembre 2026 à 23:00 UTC.
  *
  * Les deux exemples sont réels : U+0036 => "6", U+0043 => "C".
- * La notation de l'énigme U+(53+45+43+52+45+54) n'est pas une
+ * La notation de l'énigme U+(44+45+53+54+49+4E) n'est pas une
  * expression Unicode standard : chaque bloc hexadécimal doit être
  * compris individuellement comme un code U+00XX.
  * Exemple provisoire : SECRET. À remplacer par le mot définitif.

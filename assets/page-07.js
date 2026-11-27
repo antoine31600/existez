@@ -18,7 +18,7 @@
  * Aperçu : ?apercu=8decembre
  */
 const REVEAL_COLORS_AT = Date.parse('2026-12-07T23:00:00Z');
-const COLOR_CODES = ['#41D92A', '#D442F0', '#12F543'];
+const COLOR_CODES = ["#411E37","#38527E","#5D8843","#48BD44","#A7498B","#CC5F56","#499451","#4E5398","#733654","#456B5E"];
 const COLOR_DURATION_MS = 3000;
 
 (() => {

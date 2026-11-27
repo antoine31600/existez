@@ -11,7 +11,7 @@
  * Le mot sera consultable dans ce fichier public AVANT cette date.
  * Ce n'est donc pas un mécanisme de secret sécurisé.
  */
-const JOUR_03_MOT_DE_PASSE = 'passage'; // PROVISOIRE : adresse /existez/passage/
+const JOUR_03_MOT_DE_PASSE = 'lunaire'; // PROVISOIRE : adresse /existez/passage/
 const JOUR_03_DATE_PARIS = Date.parse('2026-12-02T23:00:00Z');
 
 (() => {
