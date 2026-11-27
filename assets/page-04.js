@@ -17,6 +17,8 @@ const CIPHER_REVEAL_AT=Date.parse('2026-12-04T23:00:00Z'); // 5 décembre à min
 const CIPHER_SEQUENCE = '56310981355605'; // À REMPLACER par la véritable suite.
 (() => {
  'use strict';
+ const card=document.getElementById('arcana-button');
+ if(card)card.addEventListener('click',()=>{const on=card.classList.toggle('is-revealed');card.setAttribute('aria-pressed',String(on));card.setAttribute('aria-label',on?'Revoir le dos de la carte':'Retourner la carte de tarot')});
  const node = document.getElementById('cipher-sequence');
  const preview=new URLSearchParams(location.search).get('apercu')==='5decembre';
  function refresh(){if(node){node.textContent=CIPHER_SEQUENCE;node.hidden=!(preview||Date.now()>=CIPHER_REVEAL_AT)}}

@@ -8,3 +8,9 @@ body{font-family:'Courier New',monospace}
 .cipher-sequence{position:relative;z-index:1;margin:0;max-width:100%;overflow-wrap:anywhere;text-align:center;letter-spacing:clamp(.08em,1vw,.24em);font-size:clamp(24px,5vw,58px);line-height:1.65;text-shadow:0 0 18px #cf9a6840;user-select:text}
 
 .cipher-sequence[hidden]{display:none!important}
+
+/* La carte de l'Impératrice reste visible avant la révélation du chiffre. */
+.numeric-four .cipher-page{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:38px;padding:58px 20px 90px}
+.numeric-four .arcana-space{margin:0 auto;flex:none}
+.numeric-four .tarot-card{font-family:Georgia,'Times New Roman',serif}
+.numeric-four .cipher-sequence{order:1}
