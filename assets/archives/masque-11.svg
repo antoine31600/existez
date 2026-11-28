@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="120mm" height="120mm" viewBox="0 0 600 600" role="img" aria-label="Masque ajouré du onzième jour">
   <title>Masque XI</title>
-  <desc>Masque à superposer à la grille 5 par 5 de l'invitation, imprimé sans mise à l'échelle. Quatre ouvertures confirmées ; la cinquième requiert un mot absent de la grille fournie.</desc>
-  <path fill="#08080c" fill-rule="evenodd" d="M0 0H600V600H0Z M490 33h100v54h-100Z M10 153h100v54h-100Z M250 153h100v54h-100Z M370 393h100v54h-100Z"/>
+  <desc>Masque à superposer à la grille 5 par 5 de l'invitation, imprimé sans mise à l'échelle. Cinq ouvertures transparentes pour Spectre, Tempel, Animal, Corlan et Dirigeant, à la place de Cachot en ligne 5 colonne 2.</desc>
+  <path fill="#08080c" fill-rule="evenodd" d="M0 0H600V600H0Z M490 33h100v54h-100Z M10 153h100v54h-100Z M250 153h100v54h-100Z M370 393h100v54h-100Z M130 513h100v54h-100Z"/>
   <rect x="1" y="1" width="598" height="598" fill="none" stroke="#a48c66" stroke-width="2"/>
   <path d="M20 20h24M20 20v24 M580 20h-24M580 20v24 M20 580h24M20 580v-24 M580 580h-24M580 580v-24" fill="none" stroke="#b9a27c" stroke-width="2"/>
 </svg>

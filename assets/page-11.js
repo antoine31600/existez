@@ -1,10 +1,9 @@
 /* PROJET EXISTENCE — JOUR XI
  * Le masque est visible le 12 décembre 2026 à 00:00, heure de Paris.
  * Grille de l'invitation : 25 mots sur 5 × 5 cases de 24 mm.
- * Quatre ouvertures confirmées dans la grille communiquée par l'auteur :
- * SPECTRE (1,5) ; TEMPEL (2,1) ; ANIMAL (2,3) ; CORLAN (4,4).
- * Le cinquième mot demandé, DIRIGEANT, n'est pas présent dans les 25 mots.
- * Compléter le masque uniquement lorsque l'auteur aura corrigé la grille.
+ * Cinq ouvertures sur les mots choisis par l'auteur :
+ * SPECTRE (1,5) ; TEMPEL (2,1) ; ANIMAL (2,3) ; CORLAN (4,4) ; DIRIGEANT (5,2).
+ * DIRIGEANT remplace CACHOT dans la grille imprimée du courriel.
  * Le masque doit être imprimé à 100 %, sans ajustement.
  * Aperçu : ?apercu=12decembre
  */
